@@ -1,0 +1,2883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>CTS Lal Bari × DCST 2026–2027 — Classified Freshers Induction</title>
+
+    <!-- Unique, Sharp Typography: Syne (Display), Space Grotesk (Clean Body), JetBrains Mono (DCST Terminal) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Syne', 'sans-serif'],
+                        sans: ['"Space Grotesk"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace']
+                    },
+                    colors: {
+                        // DCST Department Palette: Hacker Black, Matrix Green, Cyber Blue
+                        cyberBg: '#06090F',
+                        cyberCard: '#0C121D',
+                        hackerGreen: '#00FF94',
+                        cyberBlue: '#00D2FF',
+                        // CTS Lal Bari College Palette: Lal (Crimson Red) & Holud (Marigold Yellow)
+                        lalRed: '#E11D2E',
+                        holud: '#FACC15',
+                        offWhite: '#F4F6FA'
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        /* =====================================================================
+           1. CTS LAL-HOLUD × DCST HACKER BLACK/BLUE/GREEN THEME SYSTEM
+        ===================================================================== */
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100dvh;
+            background-color: #06090F;
+            color: #F4F6FA;
+            font-family: 'Space Grotesk', sans-serif;
+            overflow-x: hidden;
+            touch-action: manipulation;
+        }
+
+        /* Dual-Identity Backdrop: Cyber Blue/Green Tech Grid + Lal-Holud Ambient Glow */
+        .fusion-bg {
+            background-color: #06090F;
+            background-image:
+                radial-gradient(circle at 15% 8%, rgba(225, 29, 46, 0.22) 0%, transparent 45%),
+                radial-gradient(circle at 86% 12%, rgba(250, 204, 21, 0.14) 0%, transparent 40%),
+                radial-gradient(circle at 50% 92%, rgba(0, 210, 255, 0.14) 0%, transparent 50%),
+                linear-gradient(rgba(0, 210, 255, 0.045) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 148, 0.045) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 100% 100%, 32px 32px, 32px 32px;
+        }
+
+        /* Crisp Non-Overlapping Cyber-Heritage Panel */
+        .dcst-panel {
+            background: linear-gradient(175deg, rgba(13, 20, 34, 0.96) 0%, rgba(8, 12, 20, 0.98) 100%);
+            border: 1.5px solid rgba(0, 210, 255, 0.28);
+            box-shadow:
+                inset 0 1px 0 rgba(255, 255, 255, 0.06),
+                0 18px 44px rgba(0, 0, 0, 0.78);
+        }
+
+        /* Elevated Warm Lal-Holud Archival Welcome Letter Stationery */
+        .lal-letter {
+            position: relative;
+            background:
+                radial-gradient(circle at 92% 8%, rgba(250, 204, 21, 0.26) 0%, transparent 40%),
+                radial-gradient(circle at 6% 96%, rgba(225, 29, 46, 0.14) 0%, transparent 42%),
+                linear-gradient(165deg, #FFFDF8 0%, #FEF7E7 58%, #FCECC8 100%);
+            color: #161318;
+            border: 2.5px solid #E11D2E;
+            box-shadow:
+                inset 0 0 0 5px rgba(250, 204, 21, 0.42),
+                inset 0 0 0 6.5px rgba(225, 29, 46, 0.18),
+                0 24px 58px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Subtle Animated Film Grain */
+        @keyframes grainMove {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-1%, 1%); }
+        }
+        .film-grain {
+            position: fixed;
+            inset: -4%;
+            width: 108%;
+            height: 108%;
+            pointer-events: none;
+            z-index: 88;
+            opacity: 0.036;
+            animation: grainMove 0.6s steps(2) infinite;
+        }
+
+        /* =====================================================================
+           2. MOTION, STAMPS, STICKERS & CHARACTER ANIMATIONS
+        ===================================================================== */
+        @keyframes pulseRing {
+            0% { transform: scale(1); opacity: 0.8; }
+            100% { transform: scale(1.58); opacity: 0; }
+        }
+        .pulse-ring-1 { animation: pulseRing 2.1s cubic-bezier(0.2, 0.65, 0.35, 1) infinite; }
+        .pulse-ring-2 { animation: pulseRing 2.1s cubic-bezier(0.2, 0.65, 0.35, 1) 0.8s infinite; }
+
+        @keyframes hostEnter {
+            0% { opacity: 0; transform: translateY(72px) scale(0.84); }
+            65% { opacity: 1; transform: translateY(-6px) scale(1.03); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .anim-host-enter { animation: hostEnter 0.56s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+
+        @keyframes moodFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+        .mood-float { animation: moodFloat 2.8s ease-in-out infinite; }
+
+        @keyframes moodLaugh {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-4px) rotate(-2.5deg); }
+            75% { transform: translateY(-4px) rotate(2.5deg); }
+        }
+        .mood-laugh { animation: moodLaugh 0.34s ease-in-out infinite; }
+
+        @keyframes keycardThrow {
+            0% { opacity: 0; transform: translate(-50%, 35%) scale(0.2) rotate(-28deg); }
+            36% { opacity: 1; transform: translate(-50%, -44%) scale(1.1) rotate(12deg); }
+            100% { opacity: 1; transform: translate(-50%, -50%) scale(4.5) rotate(380deg); }
+        }
+        .anim-card-throw { animation: keycardThrow 0.66s cubic-bezier(0.18, 0.89, 0.32, 1.12) forwards; }
+
+        @keyframes dockSlideUp {
+            0% { opacity: 0; transform: translateY(48px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .anim-dock-up { animation: dockSlideUp 0.34s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+
+        @keyframes badgeSlam {
+            0% { opacity: 0; transform: scale(2.1) rotate(calc(var(--rot, -5deg) * 1.6)); }
+            70% { opacity: 1; transform: scale(0.94) rotate(var(--rot, -5deg)); }
+            100% { opacity: 1; transform: scale(1) rotate(var(--rot, -5deg)); }
+        }
+        .sticker-pill {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px 14px;
+            border-radius: 11px;
+            border: 2px solid #F4F6FA;
+            box-shadow: 0 4px 0 rgba(0, 0, 0, 0.85), 0 8px 20px rgba(0, 0, 0, 0.5);
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 12.5px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            animation: badgeSlam 0.36s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        .stamp-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 12px;
+            border-radius: 10px;
+            border: 2.5px solid currentColor;
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 12px;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+            animation: badgeSlam 0.36s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        @keyframes fadeUp {
+            0% { opacity: 0; transform: translateY(12px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .anim-fade-up { animation: fadeUp 0.32s ease-out forwards; }
+
+        @keyframes shakeBox {
+            0%, 100% { transform: translate(0, 0); }
+            20% { transform: translate(-7px, 3px); }
+            40% { transform: translate(7px, -3px); }
+            60% { transform: translate(-5px, -2px); }
+            80% { transform: translate(5px, 2px); }
+        }
+        .anim-shake { animation: shakeBox 0.38s linear; }
+
+        @keyframes flashFade {
+            0% { opacity: 0.92; }
+            100% { opacity: 0; }
+        }
+        .anim-flash { animation: flashFade 0.62s ease-out forwards; }
+
+        @keyframes spinSlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .anim-spin-slow { animation: spinSlow 16s linear infinite; }
+
+        /* 3D Collector Pass */
+        .pass-perspective { perspective: 1200px; }
+        .pass-3d-card {
+            transform-style: preserve-3d;
+            transition: transform 0.16s ease-out;
+            position: relative;
+        }
+        .holo-sheen {
+            background: linear-gradient(
+                118deg,
+                transparent 15%,
+                rgba(0, 255, 148, 0.22) 34%,
+                rgba(0, 210, 255, 0.22) 50%,
+                rgba(250, 204, 21, 0.20) 66%,
+                rgba(225, 29, 46, 0.18) 80%,
+                transparent 92%
+            );
+            background-size: 240% 240%;
+            mix-blend-mode: screen;
+            pointer-events: none;
+        }
+
+        /* Clean Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #06090F; }
+        ::-webkit-scrollbar-thumb { background: #1E334B; border-radius: 99px; }
+    </style>
+</head>
+<body class="bg-cyberBg text-offWhite antialiased selection:bg-hackerGreen selection:text-cyberBg">
+
+    <!-- =====================================================================
+         SUBTLE FILM GRAIN + LAL BARI ARCHITECTURAL WATERMARK
+    ===================================================================== -->
+    <svg class="film-grain" xmlns="http://www.w3.org/2000/svg">
+        <filter id="dcstGrain">
+            <feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="3" stitchTiles="stitch" />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#dcstGrain)" />
+    </svg>
+
+    <div class="pointer-events-none fixed inset-0 z-0 opacity-[0.065] flex items-end justify-center overflow-hidden">
+        <svg viewBox="0 0 640 420" class="w-full max-w-2xl h-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26 92 L320 20 L614 92 Z" stroke="#E11D2E" stroke-width="4" />
+            <rect x="44" y="92" width="552" height="328" stroke="#FACC15" stroke-width="2.5" />
+            <circle cx="320" cy="64" r="14" stroke="#00FF94" stroke-width="2.5" />
+            <path d="M80 420 V236 C80 194 150 194 150 236 V420" stroke="#FACC15" stroke-width="2.5" />
+            <path d="M182 420 V236 C182 194 252 194 252 236 V420" stroke="#00D2FF" stroke-width="2.5" />
+            <path d="M284 420 V220 C284 172 356 172 356 220 V420" stroke="#E11D2E" stroke-width="3.5" />
+            <path d="M388 420 V236 C388 194 458 194 458 236 V420" stroke="#00D2FF" stroke-width="2.5" />
+            <path d="M490 420 V236 C490 194 560 194 560 236 V420" stroke="#FACC15" stroke-width="2.5" />
+        </svg>
+    </div>
+
+    <!-- =====================================================================
+         CLEAN FIXED TOP BAR (LAL-HOLUD COLLEGE × HACKER DCST IDENTITY)
+    ===================================================================== -->
+    <header class="fixed top-0 left-0 right-0 z-[75] h-14 px-4 flex items-center justify-between bg-cyberBg/92 backdrop-blur-md border-b border-cyberBlue/25 select-none">
+        <div class="flex items-center gap-2.5 min-w-0">
+            <span class="flex items-center gap-1 shrink-0">
+                <span class="w-2.5 h-2.5 rounded-full bg-lalRed shadow-[0_0_8px_#E11D2E]"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-holud shadow-[0_0_8px_#FACC15]"></span>
+            </span>
+            <span class="font-display text-xs sm:text-sm font-extrabold tracking-wide text-offWhite truncate">
+                CTS LAL BARI <span class="text-cyberBlue">×</span> <span class="text-hackerGreen">DCST</span>
+            </span>
+            <span id="headerFileTag" class="hidden sm:inline-block px-2 py-0.5 rounded bg-cyberBlue/15 border border-cyberBlue/40 font-mono text-[10px] font-bold uppercase tracking-wider text-cyberBlue shrink-0">
+                LOCKED
+            </span>
+        </div>
+
+        <button id="btnAudioToggle" type="button" aria-label="Toggle Sound" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/10 border border-hackerGreen/40 cursor-pointer active:scale-95 transition shrink-0">
+            <span id="audioIcon" class="text-sm leading-none">🔊</span>
+            <span id="audioLabel" class="font-mono text-[11px] font-bold text-hackerGreen uppercase">ON</span>
+        </button>
+    </header>
+
+    <!-- =====================================================================
+         GLOBAL OVERLAYS: CURTAIN, FLASH, CONFETTI, TOAST
+    ===================================================================== -->
+    <div id="transitionCurtain" class="hidden fixed inset-0 z-[95] bg-cyberBg/96 backdrop-blur-sm flex-col items-center justify-center p-6 text-center pointer-events-none">
+        <div id="transitionLabel" class="font-mono text-xs font-bold tracking-[0.24em] text-hackerGreen uppercase mb-3">
+            DECRYPTING NEXT FILE...
+        </div>
+        <div class="w-56 h-1.5 rounded-full bg-white/10 overflow-hidden">
+            <div class="w-full h-full bg-gradient-to-r from-lalRed via-holud to-hackerGreen animate-pulse"></div>
+        </div>
+    </div>
+
+    <div id="flashOverlay" class="hidden fixed inset-0 z-[92] pointer-events-none"></div>
+    <canvas id="confettiCanvas" class="pointer-events-none fixed inset-0 z-[91] w-full h-full"></canvas>
+
+    <!-- Custom In-App Toast (Never uses alert/confirm) -->
+    <div id="toastBox" class="hidden fixed top-16 left-1/2 -translate-x-1/2 z-[98] max-w-[92%] px-5 py-3 rounded-2xl bg-[#0D1624]/98 border-2 border-holud shadow-[0_14px_36px_rgba(0,0,0,0.88)] text-[15px] sm:text-base font-bold text-offWhite text-center leading-snug">
+    </div>
+
+    <!-- =====================================================================
+         BOTTOM-DOCKED SENIOR GUIDE (ZERO OVERLAP WITH MAIN CONTENT)
+    ===================================================================== -->
+    <div id="seniorDockWrap" class="hidden fixed bottom-3 left-3 right-3 z-[70] max-w-lg mx-auto pointer-events-none">
+        <!-- Expanded Dock -->
+        <div id="seniorDockCard" class="pointer-events-auto flex items-center gap-3.5 bg-[#0A111C]/96 backdrop-blur-md border-2 border-cyberBlue/65 rounded-2xl p-3.5 shadow-[0_14px_40px_rgba(0,0,0,0.92)] anim-dock-up">
+            <div id="dockAvatarMount" class="w-16 h-16 rounded-xl bg-cyberBg border-2 border-hackerGreen/70 shrink-0 overflow-hidden flex items-end justify-center"></div>
+            <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between gap-2 mb-1">
+                    <span class="font-mono text-[10.5px] font-extrabold uppercase tracking-wider text-hackerGreen">
+                        SENIOR HOST • DCST
+                    </span>
+                    <button id="btnCollapseDock" type="button" class="px-2 py-0.5 rounded-full bg-white/10 hover:bg-white/20 font-mono text-[10px] font-bold text-offWhite/90 cursor-pointer">
+                        Hide ✕
+                    </button>
+                </div>
+                <p id="dockSpeechText" class="text-[15.5px] sm:text-[16.5px] font-semibold text-offWhite leading-[1.45]"></p>
+            </div>
+        </div>
+
+        <!-- Minimized Pill -->
+        <div class="flex justify-end">
+            <button id="btnExpandDock" type="button" class="hidden pointer-events-auto items-center gap-2 px-4 py-2.5 rounded-full bg-[#0C1524]/95 border-2 border-hackerGreen text-hackerGreen font-mono text-xs font-extrabold shadow-xl cursor-pointer active:scale-95 transition">
+                <span>🕶️</span>
+                <span>SENIOR TIP</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         STAGE 0 — MYSTERIOUS CLASSIFIED SUMMONS (INSTANT AUDIO UNLOCK)
+    ===================================================================== -->
+    <section id="stage0" class="relative z-20 min-h-[100dvh] w-full pt-20 pb-10 px-5 flex flex-col items-center justify-between fusion-bg">
+        <!-- Top Identity Tag -->
+        <div class="w-full max-w-md mx-auto text-center space-y-2">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-lalRed/20 border border-holud/60 font-mono text-[11px] font-extrabold tracking-[0.18em] text-holud uppercase">
+                CTS LAL BARI × DCST // FILE #26-27
+            </div>
+            <p class="font-mono text-xs font-bold tracking-[0.16em] text-cyberBlue uppercase">
+                CTS GOVERNMENT POLYTECHNIC • KOLKATA
+            </p>
+        </div>
+
+        <!-- Center Fusion Crest + Suspense Hook -->
+        <div class="w-full max-w-md mx-auto my-auto py-6 flex flex-col items-center text-center gap-6">
+            <!-- Lal-Holud Building inside Hacker Green/Blue Scanner Crest -->
+            <div class="relative w-32 h-32 sm:w-36 sm:h-36 flex items-center justify-center">
+                <div class="absolute inset-0 rounded-full border-2 border-dashed border-hackerGreen/65 anim-spin-slow"></div>
+                <div class="w-28 h-28 sm:w-30 sm:h-30 rounded-full bg-[#0B121F] border-[2.5px] border-holud shadow-[0_0_40px_rgba(225,29,46,0.4),0_0_24px_rgba(0,210,255,0.25)] flex items-center justify-center p-4">
+                    <svg viewBox="0 0 120 120" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 52 L60 18 L104 52 Z" fill="#E11D2E" stroke="#FACC15" stroke-width="2.6" />
+                        <rect x="24" y="52" width="72" height="44" fill="#9E1220" stroke="#FACC15" stroke-width="2.4" />
+                        <path d="M35 96 V69 C35 61 49 61 49 69 V96" fill="#06090F" stroke="#00D2FF" stroke-width="2" />
+                        <path d="M53 96 V65 C53 56 67 56 67 65 V96" fill="#06090F" stroke="#00FF94" stroke-width="2.4" />
+                        <path d="M71 96 V69 C71 61 85 61 85 69 V96" fill="#06090F" stroke="#00D2FF" stroke-width="2" />
+                        <circle cx="60" cy="38" r="5" fill="#FACC15" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <div class="font-mono text-xs font-extrabold tracking-[0.22em] text-hackerGreen uppercase">
+                    TOP SECRET FRESHERS TRANSMISSION
+                </div>
+                <h1 class="font-display text-3xl sm:text-4xl font-extrabold text-offWhite tracking-tight leading-tight">
+                    <span class="text-lalRed">LAL</span> <span class="text-holud">BARI</span><br />
+                    <span class="text-cyberBlue">DCST</span> <span class="text-hackerGreen">2026–2027</span>
+                </h1>
+                <p class="text-[17px] sm:text-[18px] font-medium text-offWhite/85 leading-[1.6] max-w-sm mx-auto">
+                    Senior Council theke ekta mystery file esheche. Bhetore ki ache keu jane na — seal bhenge dekhe ne!
+                </p>
+            </div>
+        </div>
+
+        <!-- Primary Unlock Button -->
+        <div class="w-full max-w-md mx-auto flex flex-col items-center gap-3.5 pb-2">
+            <div class="relative flex items-center justify-center">
+                <span class="pointer-events-none absolute inset-0 rounded-full border-2 border-lalRed/80 pulse-ring-1"></span>
+                <span class="pointer-events-none absolute inset-0 rounded-full border-2 border-hackerGreen/65 pulse-ring-2"></span>
+                <button id="btnOpenSummons" type="button" class="relative z-10 min-h-[62px] px-8 py-4 rounded-full bg-gradient-to-r from-lalRed via-[#C81626] to-lalRed border-2 border-holud text-offWhite font-display text-base sm:text-lg font-extrabold tracking-wide uppercase shadow-[0_0_34px_rgba(225,29,46,0.55)] cursor-pointer active:scale-95 transition flex items-center gap-3">
+                    <span>🔓</span>
+                    <span>UNLOCK MYSTERY FILE</span>
+                </button>
+            </div>
+            <span class="font-mono text-[11px] text-cyberBlue/80 uppercase tracking-widest">
+                TAP TO AUTO-START AUDIO &amp; VIBRATION
+            </span>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         STAGE 1 — STYLISH SIGMA SENIOR HOST BRIEFING (CLEAN SPACING, MANUAL TAP)
+    ===================================================================== -->
+    <section id="stage1" class="hidden relative z-20 min-h-[100dvh] w-full pt-20 pb-8 px-4 flex-col justify-between fusion-bg">
+        <!-- Top Progress Row -->
+        <div class="w-full max-w-md mx-auto flex items-center justify-between gap-3">
+            <span class="font-mono text-xs font-extrabold tracking-[0.18em] text-hackerGreen uppercase">
+                LIVE TRANSMISSION
+            </span>
+            <div class="flex items-center gap-2">
+                <span id="introDot0" class="h-2 w-8 rounded-full bg-hackerGreen transition-all"></span>
+                <span id="introDot1" class="h-2 w-3.5 rounded-full bg-white/20 transition-all"></span>
+                <span id="introDot2" class="h-2 w-3.5 rounded-full bg-white/20 transition-all"></span>
+            </div>
+        </div>
+
+        <!-- Center Host Showcase (Dedicated Sticker Slot ABOVE Host so zero overlap!) -->
+        <div class="relative flex-1 w-full max-w-md mx-auto flex flex-col items-center justify-center gap-3 my-4">
+            <div id="introStickerSlot" class="min-h-[38px] flex items-center justify-center"></div>
+            <div id="introSeniorMount" class="w-60 h-64 sm:w-64 sm:h-68 flex items-end justify-center"></div>
+
+            <!-- Glowing Fusion Keycard Thrown From Host Jacket Pocket -->
+            <div id="sealCardProjectile" class="hidden fixed left-1/2 top-1/2 z-[93] w-44 h-60 pointer-events-none">
+                <svg viewBox="0 0 170 230" class="w-full h-full drop-shadow-[0_18px_38px_rgba(0,255,148,0.75)]">
+                    <rect x="6" y="6" width="158" height="218" rx="18" fill="#0B121E" stroke="#FACC15" stroke-width="5" />
+                    <rect x="16" y="16" width="138" height="198" rx="12" fill="#06090F" stroke="#00FF94" stroke-width="2.5" />
+                    <path d="M40 96 L85 60 L130 96 Z" fill="#E11D2E" stroke="#FACC15" stroke-width="2.5" />
+                    <rect x="48" y="96" width="74" height="44" fill="#9E1220" stroke="#FACC15" stroke-width="2.5" />
+                    <text x="85" y="45" fill="#00D2FF" font-family="JetBrains Mono" font-size="11" font-weight="800" text-anchor="middle">MYSTERY FILE</text>
+                    <text x="85" y="168" fill="#F4F6FA" font-family="Syne" font-size="17" font-weight="800" text-anchor="middle">LAL BARI</text>
+                    <text x="85" y="191" fill="#00FF94" font-family="JetBrains Mono" font-size="11" font-weight="800" text-anchor="middle">DCST 26–27</text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Bottom Spacious Dialogue Card (Strictly Manual Tap) -->
+        <div class="w-full max-w-md mx-auto">
+            <div class="dcst-panel rounded-3xl p-5 sm:p-6 flex flex-col gap-5">
+                <div class="flex items-center justify-between font-mono text-xs font-extrabold uppercase tracking-wider">
+                    <span class="text-holud">SIGMA SENIOR • DCST</span>
+                    <span id="introBeatLabel" class="text-cyberBlue">1 / 3</span>
+                </div>
+
+                <p id="introDialogueText" class="text-[18.5px] sm:text-[20px] font-bold text-offWhite leading-[1.58]"></p>
+
+                <button id="btnIntroNext" type="button" class="w-full min-h-[56px] py-4 px-5 rounded-2xl bg-gradient-to-r from-hackerGreen to-cyberBlue hover:brightness-110 text-cyberBg font-display text-base sm:text-lg font-extrabold uppercase tracking-wide shadow-[0_5px_0_#067A5A] cursor-pointer active:translate-y-0.5 transition">
+                    NEXT →
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         STAGE 2 — MYSTERY FILE 01 (SUSPENSEFUL ENTRY → UNEXPECTED TWIST)
+    ===================================================================== -->
+    <section id="stage2" class="hidden relative z-20 min-h-[100dvh] w-full pt-20 pb-48 px-4 flex-col max-w-lg mx-auto fusion-bg">
+        <!-- Non-Spoiler Suspense Header -->
+        <div class="w-full mb-4 flex items-center justify-between gap-2">
+            <span class="font-mono text-xs font-extrabold tracking-widest text-cyberBlue uppercase">
+                MYSTERY FILE 01 // DAY ONE
+            </span>
+            <span id="t1PhaseTag" class="px-2.5 py-1 rounded-lg bg-lalRed/25 border border-holud/50 font-mono text-[11px] font-bold text-holud uppercase">
+                UNOPENED
+            </span>
+        </div>
+
+        <div id="t1Card" class="dcst-panel rounded-3xl p-6 flex flex-col gap-5">
+            <!-- Dedicated Non-Overlapping Stamp Row -->
+            <div id="t1StickerSlot" class="hidden justify-center"></div>
+
+            <!-- Phase 2A: Suspenseful Closed Door -->
+            <div id="t1DoorView" class="flex flex-col items-center text-center gap-5">
+                <div class="px-4 py-1.5 rounded-full bg-cyberBlue/15 border border-cyberBlue/45 font-mono text-xs font-extrabold tracking-widest text-cyberBlue uppercase">
+                    MORNING BELL JUST RANG
+                </div>
+
+                <div class="w-full max-w-xs py-4 px-5 rounded-2xl bg-cyberBg border-2 border-lalRed shadow-[0_0_26px_rgba(225,29,46,0.35)] font-mono text-4xl sm:text-5xl font-extrabold text-holud tracking-widest">
+                    10:31 AM
+                </div>
+
+                <p class="text-[18px] font-semibold text-offWhite/90 leading-[1.6] max-w-sm">
+                    Classroom-er darja bondho. Tui matro <strong class="text-holud">1 minute</strong> pore pouchali. Bhetore ki hobe?
+                </p>
+
+                <button id="btnHeroEntry" type="button" class="w-full min-h-[58px] py-4 px-5 rounded-2xl bg-gradient-to-r from-lalRed to-[#B91524] hover:brightness-110 border-2 border-holud text-offWhite font-display text-base sm:text-lg font-extrabold uppercase tracking-wide shadow-[0_5px_0_#7F0E19] cursor-pointer active:translate-y-0.5 transition">
+                    DARJA THELE DHUKE JAA 🚪
+                </button>
+            </div>
+
+            <!-- Phase 2B: Unexpected Twist — Strict Teacher Slam -->
+            <div id="t1TeacherView" class="hidden flex-col items-center text-center gap-5 anim-fade-up">
+                <div class="w-32 h-32 rounded-2xl bg-[#101829] border-2 border-holud/75 overflow-hidden flex items-end justify-center shadow-xl">
+                    <!-- Strict Teacher Vector Illustration -->
+                    <svg viewBox="0 0 130 130" class="w-full h-full">
+                        <path d="M10 130 L26 90 H104 L120 130 Z" fill="#1E293B" stroke="#06090F" stroke-width="3" />
+                        <path d="M55 90 L65 114 L75 90 Z" fill="#F4F6FA" />
+                        <rect x="62" y="98" width="6" height="28" fill="#E11D2E" />
+                        <rect x="56" y="76" width="18" height="18" fill="#D59A73" />
+                        <path d="M38 30 H92 V70 L76 85 H54 L38 70 Z" fill="#DDA37C" stroke="#06090F" stroke-width="3" />
+                        <path d="M36 40 C36 16 94 16 94 40 C84 30 46 30 36 40 Z" fill="#475569" />
+                        <rect x="43" y="49" width="18" height="11" rx="2" fill="#FFFFFF" stroke="#06090F" stroke-width="2.5" />
+                        <rect x="69" y="49" width="18" height="11" rx="2" fill="#FFFFFF" stroke="#06090F" stroke-width="2.5" />
+                        <line x1="61" y1="54" x2="69" y2="54" stroke="#06090F" stroke-width="2.5" />
+                        <circle cx="52" cy="54.5" r="2.6" fill="#06090F" />
+                        <circle cx="78" cy="54.5" r="2.6" fill="#06090F" />
+                        <line x1="42" y1="43" x2="61" y2="46" stroke="#06090F" stroke-width="3" />
+                        <line x1="69" y1="46" x2="88" y2="43" stroke="#06090F" stroke-width="3" />
+                        <path d="M51 67 Q65 63 79 67" stroke="#475569" stroke-width="3.8" stroke-linecap="round" fill="none" />
+                        <line x1="56" y1="74" x2="74" y2="74" stroke="#06090F" stroke-width="2.6" />
+                    </svg>
+                </div>
+
+                <div class="w-full rounded-2xl bg-cyberBg border-2 border-lalRed/80 p-4 text-left space-y-2">
+                    <div class="font-mono text-xs font-extrabold uppercase tracking-wider text-lalRed">
+                        STRICT SIR • 10:31 AM
+                    </div>
+                    <p class="text-[17.5px] font-bold text-offWhite leading-[1.58]">
+                        "10:30-er class, 10:31 hoye geche! Baire giye boshe thakun — aaj ar class-e entry nei!"
+                    </p>
+                </div>
+
+                <button id="btnStartAssignGame" type="button" class="w-full min-h-[58px] py-4 px-5 rounded-2xl bg-holud hover:brightness-105 text-cyberBg font-display text-base sm:text-lg font-extrabold uppercase tracking-wide shadow-[0_5px_0_#A16207] cursor-pointer active:translate-y-0.5 transition">
+                    UNLOCK SECRET BACKUP PLAN →
+                </button>
+            </div>
+
+            <!-- Phase 2C: Surprise Mini-Game — Emergency Assignment Rescue -->
+            <div id="t1GameView" class="hidden flex-col gap-4 anim-fade-up">
+                <div class="flex items-center justify-between gap-2">
+                    <span class="font-display text-lg font-extrabold text-hackerGreen">EMERGENCY RESCUE</span>
+                    <span id="assignTimerBadge" class="font-mono text-sm font-extrabold px-3.5 py-1.5 rounded-xl bg-holud/15 text-holud border border-holud/55">12.0s</span>
+                </div>
+
+                <p class="text-[16.5px] font-semibold text-offWhite/90 leading-[1.55]">
+                    Green <strong class="text-hackerGreen">COPY PAGE</strong> 6 bar tap kore biroktikor assignment sesh kor — red distraction pop-up avoid kor!
+                </p>
+
+                <div class="space-y-2">
+                    <div class="flex justify-between font-mono text-xs font-bold">
+                        <span class="text-offWhite/75">PROGRESS</span>
+                        <span id="assignCountLabel" class="text-hackerGreen">0 / 6 PAGES</span>
+                    </div>
+                    <div class="w-full h-3.5 rounded-full bg-cyberBg border border-cyberBlue/40 overflow-hidden">
+                        <div id="assignProgressBar" class="h-full w-0 bg-gradient-to-r from-cyberBlue to-hackerGreen transition-all duration-150"></div>
+                    </div>
+                </div>
+
+                <div id="assignArena" class="relative w-full h-56 rounded-2xl bg-cyberBg border border-cyberBlue/35 overflow-hidden flex items-center justify-center p-4 select-none">
+                    <button id="btnCopyPage" type="button" class="relative z-10 min-h-[64px] px-6 py-4 rounded-2xl bg-hackerGreen hover:brightness-105 text-cyberBg font-display text-base sm:text-lg font-extrabold uppercase tracking-wide shadow-[0_6px_0_#059669,0_0_26px_rgba(0,255,148,0.35)] cursor-pointer active:translate-y-1 transition">
+                        📄 COPY PAGE (+1)
+                    </button>
+                </div>
+
+                <div id="t1PostGameRow" class="hidden flex-col gap-3 pt-1">
+                    <button id="btnToStage3" type="button" class="w-full min-h-[58px] py-4 px-5 rounded-2xl bg-offWhite hover:bg-white text-cyberBg font-display text-base sm:text-lg font-extrabold uppercase tracking-wide cursor-pointer active:scale-[0.98] transition">
+                        OPEN MYSTERY FILE 02 →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         STAGE 3 — MYSTERY DECK (5 SUSPENSEFUL ENVELOPES — ZERO SPOILERS!)
+    ===================================================================== -->
+    <section id="stage3" class="hidden relative z-20 min-h-[100dvh] w-full pt-20 pb-48 px-4 flex-col max-w-lg mx-auto fusion-bg">
+        <div class="w-full mb-4 flex items-center justify-between gap-2">
+            <span class="font-mono text-xs font-extrabold tracking-widest text-cyberBlue uppercase">
+                MYSTERY FILE 02 // BLIND CHOICES
+            </span>
+            <span id="deckCounterBadge" class="px-3 py-1 rounded-full bg-lalRed/25 border border-holud/60 font-mono text-xs font-extrabold text-holud">
+                CASE 1 / 5
+            </span>
+        </div>
+
+        <div class="relative w-full flex-1 flex flex-col justify-center gap-4">
+            <!-- Mystery Card Front (No Spoilers! Pure Curiosity) -->
+            <div id="swipeCard" class="dcst-panel rounded-3xl p-6 flex flex-col gap-5 select-none cursor-grab active:cursor-grabbing relative overflow-hidden">
+                <div id="swipeOverlayStamp" class="hidden absolute top-5 right-5 z-20 px-3.5 py-1.5 rounded-xl border-[3px] font-sans text-sm font-extrabold uppercase"></div>
+
+                <div id="swipeVisualBox" class="w-full h-36 rounded-2xl bg-cyberBg border border-cyberBlue/30 flex items-center justify-center p-3 overflow-hidden"></div>
+
+                <div class="space-y-2.5">
+                    <div id="swipeCardTag" class="font-mono text-xs font-extrabold uppercase tracking-widest text-hackerGreen"></div>
+                    <h2 id="swipeCardTitle" class="font-display text-2xl font-extrabold text-offWhite leading-snug"></h2>
+                    <p id="swipeCardDesc" class="text-[17.5px] font-semibold text-offWhite/90 leading-[1.6]"></p>
+                </div>
+            </div>
+
+            <!-- Surprise Twist Reveal Panel (Waits for Manual Tap!) -->
+            <div id="swipeFeedbackBox" class="hidden dcst-panel rounded-3xl p-6 flex-col items-center text-center gap-4 border-2 border-holud anim-fade-up">
+                <div id="swipeFeedbackSticker" class="min-h-[34px] flex items-center justify-center"></div>
+                <h3 id="swipeFeedbackHead" class="font-display text-xl sm:text-2xl font-extrabold text-holud leading-snug"></h3>
+                <p id="swipeFeedbackBody" class="text-[17px] sm:text-[18px] font-semibold text-offWhite/95 leading-[1.6]"></p>
+
+                <button id="btnDeckNext" type="button" class="w-full min-h-[56px] py-4 px-5 rounded-2xl bg-gradient-to-r from-hackerGreen to-cyberBlue text-cyberBg font-display text-base sm:text-lg font-extrabold uppercase tracking-wide shadow-[0_5px_0_#067A5A] cursor-pointer active:translate-y-0.5 transition">
+                    NEXT MYSTERY →
+                </button>
+            </div>
+
+            <!-- Effortless Big Choice Buttons -->
+            <div id="deckActionButtons" class="grid grid-cols-2 gap-3.5">
+                <button id="btnSwipeNo" type="button" class="min-h-[60px] py-4 px-4 rounded-2xl bg-[#190D14] hover:bg-[#27121D] border-2 border-lalRed text-lalRed font-display text-base sm:text-lg font-extrabold uppercase tracking-wide cursor-pointer active:scale-95 transition">
+                    ✕ NA BHAI
+                </button>
+                <button id="btnSwipeYes" type="button" class="min-h-[60px] py-4 px-4 rounded-2xl bg-hackerGreen/15 hover:bg-hackerGreen/25 border-2 border-hackerGreen text-hackerGreen font-display text-base sm:text-lg font-extrabold uppercase tracking-wide cursor-pointer active:scale-95 transition">
+                    ✓ FULL READY
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         STAGE 4 — FINAL CEREMONY: LAL BARI × DCST SENIOR COUNCIL OATH
+    ===================================================================== -->
+    <section id="stage4" class="hidden relative z-20 min-h-[100dvh] w-full pt-20 pb-48 px-4 flex-col max-w-lg mx-auto fusion-bg">
+        <div class="w-full mb-4 flex items-center justify-between gap-2">
+            <span class="font-mono text-xs font-extrabold tracking-widest text-holud uppercase">
+                FINAL PROTOCOL // SEALED CHAMBER
+            </span>
+            <span class="font-mono text-xs font-extrabold text-hackerGreen animate-pulse">● LIVE</span>
+        </div>
+
+        <div class="dcst-panel rounded-3xl p-6 border-2 border-holud/65 flex flex-col gap-5">
+            <div class="text-center border-b border-cyberBlue/25 pb-4 space-y-2">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-lalRed/25 border border-holud/60 font-mono text-[11px] font-extrabold tracking-[0.18em] text-holud uppercase">
+                    CTS SENIOR COUNCIL OATH
+                </div>
+                <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-offWhite tracking-tight">
+                    Final Induction Pact
+                </h2>
+                <p class="text-[16px] font-medium text-offWhite/80 leading-relaxed">
+                    Nicher 3-te clause tick kore Lal Bari × DCST seal stamp kor (Boys &amp; Girls mandatory!):
+                </p>
+            </div>
+
+            <!-- 3 Cleanly Spaced Clauses -->
+            <div class="space-y-3.5">
+                <label class="oath-clause flex items-start gap-3.5 p-4 rounded-2xl bg-cyberBg/90 border-2 border-white/15 hover:border-cyberBlue/60 cursor-pointer transition">
+                    <input type="checkbox" class="oath-check mt-1 w-6 h-6 accent-[#00FF94] shrink-0 cursor-pointer" />
+                    <div class="space-y-1">
+                        <div class="font-mono text-xs font-extrabold uppercase tracking-wider text-holud">
+                            01 • SENIOR RESPECT &amp; TREAT TAX
+                        </div>
+                        <p class="text-[16.5px] font-semibold text-offWhite leading-[1.52]">
+                            Jekhanei Senior dekhbo — hashi mukhe full respect debo, ar sujog pele Senior-der treat-o khawabo! 😂🍕
+                        </p>
+                    </div>
+                </label>
+
+                <label class="oath-clause flex items-start gap-3.5 p-4 rounded-2xl bg-cyberBg/90 border-2 border-white/15 hover:border-cyberBlue/60 cursor-pointer transition">
+                    <input type="checkbox" class="oath-check mt-1 w-6 h-6 accent-[#00FF94] shrink-0 cursor-pointer" />
+                    <div class="space-y-1">
+                        <div class="font-mono text-xs font-extrabold uppercase tracking-wider text-cyberBlue">
+                            02 • ZERO ESCAPE ON FEST &amp; PUJO DAYS
+                        </div>
+                        <p class="text-[16.5px] font-semibold text-offWhite leading-[1.52]">
+                            Class bunk marleo chalbe, kintu Social, Cultural, Sports, Saraswati Pujo, Biswakarma Pujo ar Tech Fest-e bari palabo na — stage sajanor theke photo tola sob-ei full squad thakbo! 🎉😂
+                        </p>
+                    </div>
+                </label>
+
+                <label class="oath-clause flex items-start gap-3.5 p-4 rounded-2xl bg-cyberBg/90 border-2 border-white/15 hover:border-cyberBlue/60 cursor-pointer transition">
+                    <input type="checkbox" class="oath-check mt-1 w-6 h-6 accent-[#00FF94] shrink-0 cursor-pointer" />
+                    <div class="space-y-1">
+                        <div class="font-mono text-xs font-extrabold uppercase tracking-wider text-hackerGreen">
+                            03 • DCST SQUAD UNITY &amp; BHAICHARA
+                        </div>
+                        <p class="text-[16.5px] font-semibold text-offWhite leading-[1.52]">
+                            Lab, exam, Kalo Pathor adda ba campus-er jekono tension — DCST batch-er sobai eksathe thakbo, kauke eka chharbo na! 🤝⚡
+                        </p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- Dodging Refuse Button Box (Clearly Visible + Persistent Funny Message) -->
+            <div class="space-y-2.5">
+                <div id="refusePlayground" class="relative w-full h-28 rounded-2xl bg-cyberBg/95 border-2 border-dashed border-lalRed/70 overflow-hidden shadow-inner">
+                    <div class="pointer-events-none absolute top-2 left-3 font-mono text-[10px] font-bold uppercase tracking-widest text-lalRed/75">
+                        DANGER ZONE // TRY CLICKING THIS
+                    </div>
+                    <button id="btnRefuseOrder" type="button" class="absolute px-5 py-3 rounded-xl bg-lalRed hover:brightness-110 border-2 border-holud text-offWhite font-display text-sm sm:text-base font-extrabold uppercase tracking-wide shadow-[0_4px_16px_rgba(225,29,46,0.55)] cursor-pointer transition-all duration-200 whitespace-nowrap">
+                        REFUSE ORDER ❌
+                    </button>
+                </div>
+                <div id="refuseMsgDisplay" class="hidden px-4 py-3 rounded-2xl bg-lalRed/15 border border-holud/60 text-center text-[15px] sm:text-[16px] font-bold text-holud leading-snug anim-fade-up"></div>
+            </div>
+
+            <!-- Hold-to-Stamp Button (1.2s Hold + Quick Double-Tap Fallback) -->
+            <div class="flex flex-col items-center gap-2.5 pt-1">
+                <button id="btnStampWaxSeal" type="button" class="relative w-full min-h-[76px] py-4 px-5 rounded-2xl bg-gradient-to-r from-lalRed via-[#B91524] to-lalRed border-2 border-holud text-offWhite font-display text-base sm:text-lg font-extrabold uppercase tracking-wide shadow-[0_0_32px_rgba(225,29,46,0.45)] overflow-hidden cursor-pointer select-none active:scale-[0.99] transition flex items-center justify-center gap-3.5">
+                    <div id="sealLinearFill" class="pointer-events-none absolute inset-y-0 left-0 w-0 bg-hackerGreen/35 transition-all duration-75"></div>
+                    <div class="relative z-10 w-12 h-12 shrink-0 flex items-center justify-center">
+                        <svg viewBox="0 0 48 48" class="w-12 h-12 -rotate-90">
+                            <circle cx="24" cy="24" r="20" stroke="rgba(244,246,250,0.22)" stroke-width="4" fill="none" />
+                            <circle id="sealRingCircle" cx="24" cy="24" r="20" stroke="#FACC15" stroke-width="4.5" stroke-linecap="round" fill="none" stroke-dasharray="125.66" stroke-dashoffset="125.66" />
+                        </svg>
+                        <span class="absolute text-lg">🔐</span>
+                    </div>
+                    <span id="sealBtnText" class="relative z-10 text-left leading-tight">
+                        HOLD TO STAMP OFFICIAL SEAL (1.2s)
+                    </span>
+                </button>
+                <span class="font-mono text-[11px] text-offWhite/60 text-center">
+                    Press &amp; hold 1.2s (or quick double-tap) to unlock your pass
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         STAGE 5 — GRAND FINALE HUB (ZERO REPEATED QUOTES!)
+    ===================================================================== -->
+    <section id="stage5" class="hidden relative z-20 min-h-[100dvh] w-full pt-20 pb-16 px-4 flex-col fusion-bg">
+        <div class="w-full max-w-4xl mx-auto space-y-12">
+
+            <!-- Clean Induction Header (Fresh Copy — Zero Duplicate Line!) -->
+            <div class="text-center space-y-3 anim-fade-up">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-hackerGreen/15 border border-hackerGreen/60 font-mono text-xs font-extrabold tracking-widest text-hackerGreen uppercase">
+                    ✓ ACCESS GRANTED • DCST BATCH 2026–2027
+                </div>
+                <h1 class="font-display text-3xl sm:text-5xl font-extrabold text-offWhite leading-tight">
+                    WELCOME TO <span class="text-lalRed">LAL</span> <span class="text-holud">BARI</span>
+                </h1>
+                <p class="text-[17.5px] sm:text-[19px] font-medium text-offWhite/85 max-w-2xl mx-auto leading-[1.6]">
+                    Trial sob clear! Aaj theke tui officially <strong class="text-cyberBlue">CTS Government Polytechnic</strong>-er <strong class="text-hackerGreen">DCST</strong> family-r member.
+                </p>
+            </div>
+
+            <!-- =============================================================
+                 1. HEARTFELT, ELEVATED LAL-HOLUD WELCOME LETTER (STATIONERY EDITION)
+            ============================================================= -->
+            <article class="lal-letter rounded-3xl p-6 sm:p-10 space-y-6 overflow-hidden">
+                <!-- Subtle Decorative Top Ribbon -->
+                <div class="flex items-start justify-between flex-wrap gap-4 border-b-2 border-lalRed/20 pb-5">
+                    <div class="flex items-center gap-3.5">
+                        <!-- Mini Lal Bari Crest Emblem -->
+                        <div class="w-12 h-12 rounded-2xl bg-lalRed border-2 border-holud shadow-md flex items-center justify-center shrink-0">
+                            <svg viewBox="0 0 60 60" class="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 26 L30 10 L52 26 Z" fill="#FACC15" />
+                                <rect x="13" y="26" width="34" height="22" fill="#FFFDF8" />
+                                <path d="M25 48 V34 C25 30 35 30 35 34 V48" fill="#E11D2E" />
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="font-mono text-[11px] font-extrabold tracking-[0.2em] text-lalRed uppercase">
+                                OPEN LETTER • DCST BATCH 2026–2027
+                            </div>
+                            <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-[#161318] leading-tight mt-0.5">
+                                Amader Bhalobashar Lal Bari
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="stamp-badge text-lalRed bg-holud/20" style="--rot:-4deg; animation:none; transform:rotate(-4deg);">
+                        FROM SENIORS WITH ❤️
+                    </div>
+                </div>
+
+                <!-- Letter Body (Poetic, Nostalgic, Real, Warm & Inclusive) -->
+                <div class="space-y-4 text-[17px] sm:text-[18.5px] text-[#221D24] leading-[1.72] font-medium">
+                    <p class="font-display text-xl sm:text-2xl font-extrabold text-lalRed">
+                        Priyo Notun Brothers &amp; Sisters,
+                    </p>
+
+                    <p>
+                        Etokkhon joto suspense, 10:31-er gate-er bhoy ar Senior Council-er natok dekhli — sobtai chilo amader nijer style-e toder buke tene newar ekta chhoto bahana! Aaj tui shudhu ekta college-e admission nish ni — tui pa rakhli amader sobar praner <strong class="text-lalRed">CTS Government Polytechnic</strong>, amader bhalobashar <strong class="text-lalRed">Lal Bari</strong>-te.
+                    </p>
+
+                    <p>
+                        Ekhane class-er whiteboard-er cheyeo beshi jibon shekha hoy <strong class="text-lalRed">Kalo Pathor-e</strong> boshe ghontar por ghonta adda mere. Ekdin boring lecture bunk kore jokhon bondhuder sathe <strong class="text-lalRed">Maidan-er ghash, Victoria-r baire, ba Gangar paar-er thanda haway</strong> bikel katabi — tokhon bujhbi, degree-r cheyeo boro kichu ekhane toiri hochhe: sara jiboner bondhutwo.
+                    </p>
+
+                    <p>
+                        Raat 3-tey assignment-er PDF cheye jagbi, 10:31 hole sir-er samne mukh chhoto korbi — abar <strong class="text-lalRed">Saraswati Pujo, Biswakarma Pujo, Social, Cultural, Sports ar Tech Fest</strong>-er aager raate ghum bhule sobai mile ei Lal Bari-take sajabi. Prothom din ektu ochena lagche, tai na? Chinta korish na — Senior-der chhoto-khato boka ar order-er pichonei lukiye thake sobcheye boro bhalobasha ar bhaichara.
+                    </p>
+
+                    <!-- Campus Memory Highlights Strip -->
+                    <div class="flex flex-wrap gap-2 py-1">
+                        <span class="px-3 py-1 rounded-full bg-lalRed/10 border border-lalRed/30 font-mono text-xs font-extrabold text-lalRed">🪨 Kalo Pathor Adda</span>
+                        <span class="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-600/35 font-mono text-xs font-extrabold text-[#7C4A03]">🌊 Maidan &amp; Gangar Paar</span>
+                        <span class="px-3 py-1 rounded-full bg-lalRed/10 border border-lalRed/30 font-mono text-xs font-extrabold text-lalRed">🎉 Pujo • Social • Tech Fest</span>
+                        <span class="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-600/35 font-mono text-xs font-extrabold text-[#7C4A03]">🤝 Forever Bhaichara</span>
+                    </div>
+
+                    <!-- Emotional Goosebump Pull-Quote -->
+                    <blockquote class="relative p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-lalRed/12 via-amber-400/15 to-transparent border-l-4 border-lalRed text-[#161318] font-bold text-[17.5px] sm:text-[19px] leading-[1.65] shadow-sm">
+                        "Aaj haate file niye ochena mukh dekhe bhitore dhukchish... kintu 3 bochor por jokhon ei Lal Bari-r gate diye sheshbar berobi, tokhon chokher kone jol ar moner bhetore ekta kothai bajbe — <span class="text-lalRed">'Ekhanei amar jiboner shera 3-te bochor keteche!'</span>"
+                    </blockquote>
+
+                    <p>
+                        Jekono somoshya, confusion, exam-er tension, ba shudhu ektu mon kharap hole — mone rakhish, amra <strong class="text-lalRed">DCST Seniors</strong>-ra always ek dak-ei tor pashe achhi. Matha uchu kore, buke sahosh ar mukhe hashi niye shuru kor tor notun golpo. <strong class="text-lalRed">Welcome Home, DCST '26–'27!</strong>
+                    </p>
+                </div>
+
+                <!-- Warm Handwritten-Feel Footer Sign-Off -->
+                <div class="pt-5 border-t-2 border-lalRed/20 flex items-center justify-between flex-wrap gap-3">
+                    <div>
+                        <div class="font-mono text-[11px] font-bold uppercase tracking-widest text-[#6B543E]">
+                            BHALOBASHA O BHAICHARA-SHOHO,
+                        </div>
+                        <div class="font-display text-xl sm:text-2xl font-extrabold text-lalRed mt-0.5">
+                            — Tomader DCST Seniors 🏛️❤️⚡
+                        </div>
+                    </div>
+                    <div class="px-3.5 py-2 rounded-xl bg-lalRed/10 border border-lalRed/25 font-mono text-[11px] font-extrabold text-[#5A3F2B] uppercase tracking-wider">
+                        CTS GOVT. POLYTECHNIC • KOLKATA
+                    </div>
+                </div>
+            </article>
+
+            <!-- =============================================================
+                 2. COLLECTOR'S 9:16 INSTA STORY PASS (DCST HACKER × LAL-HOLUD)
+            ============================================================= -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+                <!-- Left Customizer Panel -->
+                <div class="lg:col-span-6 dcst-panel rounded-3xl p-6 space-y-5">
+                    <div>
+                        <span class="font-mono text-xs font-extrabold uppercase tracking-widest text-cyberBlue">
+                            9:16 COLLECTOR'S PASS GENERATOR
+                        </span>
+                        <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-offWhite mt-1">
+                            Build Your Story Card
+                        </h2>
+                    </div>
+
+                    <!-- Name Input -->
+                    <div>
+                        <label for="passNameInput" class="block font-mono text-xs font-extrabold uppercase tracking-widest text-offWhite/75 mb-2">
+                            YOUR NAME / NICKNAME
+                        </label>
+                        <input id="passNameInput" type="text" maxlength="22" placeholder="e.g. RIYA / ARJUN" class="w-full min-h-[54px] px-4 py-3 rounded-xl bg-cyberBg border-2 border-cyberBlue/40 focus:border-hackerGreen focus:outline-none font-sans text-lg font-bold text-offWhite uppercase tracking-wide placeholder:text-offWhite/30" />
+                    </div>
+
+                    <!-- Live Camera + Gallery + 4 Stylish Inclusive Avatars -->
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-mono text-xs font-extrabold uppercase tracking-widest text-offWhite/75">
+                                SELFIE OR STYLISH AVATAR
+                            </span>
+                            <button id="btnRemovePhoto" type="button" class="hidden font-mono text-xs font-bold text-lalRed underline cursor-pointer">
+                                Remove Photo
+                            </button>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-2.5 mb-3">
+                            <button id="btnOpenLiveCam" type="button" class="min-h-[52px] py-3 px-3 rounded-xl bg-hackerGreen hover:brightness-105 text-cyberBg font-sans text-sm font-extrabold cursor-pointer active:scale-95 transition">
+                                📷 Live Camera Selfie
+                            </button>
+                            <label for="galleryFileInput" class="min-h-[52px] py-3 px-3 rounded-xl bg-cyberBlue/15 hover:bg-cyberBlue/25 border-2 border-dashed border-cyberBlue/70 text-cyberBlue font-sans text-sm font-extrabold cursor-pointer flex items-center justify-center transition">
+                                🖼️ Gallery Photo
+                            </label>
+                            <input id="galleryFileInput" type="file" accept="image/*" capture="user" class="hidden" />
+                        </div>
+
+                        <div id="avatarPickerGrid" class="grid grid-cols-4 gap-2"></div>
+                    </div>
+
+                    <!-- 8 Punchy, Funny, Inclusive (Boys & Girls) Titles -->
+                    <div>
+                        <span class="block font-mono text-xs font-extrabold uppercase tracking-widest text-offWhite/75 mb-2">
+                            CHOOSE YOUR VIBE TITLE (BOYS &amp; GIRLS)
+                        </span>
+                        <div id="titlePickerGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-60 overflow-y-auto pr-1"></div>
+                    </div>
+
+                    <!-- 4 Collector Stamps -->
+                    <div>
+                        <span class="block font-mono text-xs font-extrabold uppercase tracking-widest text-offWhite/75 mb-2">
+                            STAMP SEAL
+                        </span>
+                        <div id="stampPickerGrid" class="grid grid-cols-2 gap-2"></div>
+                    </div>
+
+                    <!-- High-DPI 1080×1920 PNG Export -->
+                    <button id="btnDownloadStoryPNG" type="button" class="w-full min-h-[60px] py-4 px-5 rounded-2xl bg-gradient-to-r from-lalRed via-[#D11929] to-lalRed hover:brightness-110 border-2 border-holud text-offWhite font-display text-base sm:text-lg font-extrabold uppercase tracking-wide shadow-[0_8px_28px_rgba(225,29,46,0.45)] cursor-pointer active:scale-[0.98] transition">
+                        ⬇ DOWNLOAD 9:16 INSTA STORY PNG
+                    </button>
+                </div>
+
+                <!-- Right Live 3D Holographic Fusion Pass (Zero Overlapping Elements!) -->
+                <div class="lg:col-span-6 flex flex-col items-center gap-3">
+                    <div class="font-mono text-xs text-cyberBlue uppercase tracking-widest">
+                        TILT / MOVE FOR HOLOGRAPHIC SHINE
+                    </div>
+
+                    <div id="passTiltWrap" class="pass-perspective w-full max-w-[360px]">
+                        <div id="pass3dCard" class="pass-3d-card w-full rounded-[28px] bg-gradient-to-b from-[#0C1526] via-[#080E19] to-[#06090F] border-2 border-cyberBlue p-5 shadow-[0_0_44px_rgba(0,210,255,0.24),0_24px_54px_rgba(0,0,0,0.92)] overflow-hidden">
+                            <!-- Holographic Foil Sheen -->
+                            <div id="passHoloSheen" class="holo-sheen absolute inset-0 z-20"></div>
+
+                            <!-- Top Lal-Holud Accent Stripe -->
+                            <div class="pointer-events-none absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-lalRed via-holud to-hackerGreen z-20"></div>
+
+                            <!-- Corner Brackets -->
+                            <div class="pointer-events-none absolute top-4 left-3.5 w-4 h-4 border-t-2 border-l-2 border-holud"></div>
+                            <div class="pointer-events-none absolute top-4 right-3.5 w-4 h-4 border-t-2 border-r-2 border-hackerGreen"></div>
+                            <div class="pointer-events-none absolute bottom-3.5 left-3.5 w-4 h-4 border-b-2 border-l-2 border-hackerGreen"></div>
+                            <div class="pointer-events-none absolute bottom-3.5 right-3.5 w-4 h-4 border-b-2 border-r-2 border-holud"></div>
+
+                            <div class="relative z-10 flex flex-col gap-3.5 pt-1">
+                                <!-- Top Telemetry Row -->
+                                <div class="flex items-center justify-between font-mono text-[9.5px] font-extrabold uppercase tracking-wider">
+                                    <span class="inline-flex items-center gap-1.5 text-hackerGreen">
+                                        <span class="w-2 h-2 rounded-full bg-hackerGreen animate-pulse"></span>
+                                        DCST VERIFIED
+                                    </span>
+                                    <span id="passSerialTxt" class="text-holud">LB-26-4091</span>
+                                </div>
+
+                                <!-- College + Department Header -->
+                                <div class="text-center border-y border-cyberBlue/30 py-2">
+                                    <div class="font-mono text-[9px] tracking-[0.18em] text-holud uppercase">
+                                        CTS GOVERNMENT POLYTECHNIC • KOLKATA
+                                    </div>
+                                    <div class="font-display text-base font-extrabold text-offWhite tracking-wide mt-0.5">
+                                        LAL BARI <span class="text-cyberBlue">×</span> <span class="text-hackerGreen">DCST PASS</span>
+                                    </div>
+                                </div>
+
+                                <!-- Centered Circular Portrait + Clean Stamp Below (Never Clips!) -->
+                                <div class="flex flex-col items-center gap-2.5 my-1">
+                                    <div class="relative w-32 h-32 flex items-center justify-center">
+                                        <div class="absolute inset-0 rounded-full border-2 border-dashed border-cyberBlue/85 anim-spin-slow"></div>
+                                        <div class="relative w-28 h-28 rounded-full bg-cyberBg border-[3px] border-lalRed overflow-hidden flex items-end justify-center shadow-[0_0_24px_rgba(0,255,148,0.28)]">
+                                            <img id="passSelfiePreview" alt="Fresher Selfie" class="hidden w-full h-full object-cover" />
+                                            <div id="passAvatarPreview" class="w-full h-full flex items-end justify-center"></div>
+                                        </div>
+                                    </div>
+                                    <div id="passStampPreview" class="flex justify-center"></div>
+                                </div>
+
+                                <!-- Name & Vibe Title -->
+                                <div class="text-center space-y-2">
+                                    <div id="passNamePreview" class="font-display text-2xl font-extrabold text-offWhite uppercase tracking-tight leading-none truncate">
+                                        DCST JUNIOR
+                                    </div>
+                                    <div class="inline-block px-3 py-1.5 rounded-lg bg-lalRed/25 border border-holud/70 font-mono text-[10.5px] font-extrabold text-holud uppercase leading-snug">
+                                        <span id="passTitlePreview">Main Character (0% Attendance) ✨</span>
+                                    </div>
+                                </div>
+
+                                <!-- Clean 2×2 Telemetry Grid -->
+                                <div class="grid grid-cols-2 gap-2">
+                                    <div class="rounded-xl bg-cyberBg/90 border border-lalRed/40 px-2.5 py-2 text-center">
+                                        <div class="font-mono text-[8px] text-offWhite/55 uppercase">CAMPUS</div>
+                                        <div class="font-mono text-[10.5px] font-extrabold text-holud">LAL BARI</div>
+                                    </div>
+                                    <div class="rounded-xl bg-cyberBg/90 border border-cyberBlue/40 px-2.5 py-2 text-center">
+                                        <div class="font-mono text-[8px] text-offWhite/55 uppercase">DEPARTMENT</div>
+                                        <div class="font-mono text-[10.5px] font-extrabold text-cyberBlue">DCST 26-27</div>
+                                    </div>
+                                    <div class="rounded-xl bg-cyberBg/90 border border-cyberBlue/40 px-2.5 py-2 text-center">
+                                        <div class="font-mono text-[8px] text-offWhite/55 uppercase">ADDA HQ</div>
+                                        <div class="font-mono text-[10.5px] font-extrabold text-offWhite">KALO PATHOR</div>
+                                    </div>
+                                    <div class="rounded-xl bg-cyberBg/90 border border-hackerGreen/40 px-2.5 py-2 text-center">
+                                        <div class="font-mono text-[8px] text-offWhite/55 uppercase">CLEARANCE</div>
+                                        <div class="font-mono text-[10.5px] font-extrabold text-hackerGreen">SENIOR OK ✓</div>
+                                    </div>
+                                </div>
+
+                                <!-- Barcode Footer -->
+                                <div class="flex flex-col items-center gap-1 pt-0.5">
+                                    <svg id="passBarcodeSvg" viewBox="0 0 260 22" class="w-full h-5 opacity-95"></svg>
+                                    <div class="font-mono text-[8px] text-cyberBlue/85 tracking-[0.2em] uppercase">
+                                        CTS GOVT POLYTECHNIC • OFFICIAL FRESHERS ID
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =============================================================
+                 3. 4 COMPLETELY UNIQUE COPYABLE INSTAGRAM CAPTIONS
+            ============================================================= -->
+            <div class="space-y-4">
+                <div class="flex items-center justify-between flex-wrap gap-2">
+                    <div>
+                        <span class="font-mono text-xs font-extrabold uppercase tracking-widest text-hackerGreen">
+                            UNIQUE VIRAL CAPTIONS (NO REPEATS)
+                        </span>
+                        <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-offWhite mt-0.5">
+                            Copy-Paste For Your Story / Post
+                        </h2>
+                    </div>
+                    <span class="font-mono text-xs text-cyberBlue">ONE-TAP COPY</span>
+                </div>
+
+                <div id="captionsListGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="border-t border-cyberBlue/20 pt-8 flex flex-col items-center gap-4 text-center">
+                <button id="btnReplayExperience" type="button" class="min-h-[52px] px-7 py-3.5 rounded-2xl bg-white/5 hover:bg-white/10 border border-cyberBlue/45 font-mono text-xs font-extrabold uppercase tracking-widest text-offWhite cursor-pointer active:scale-95 transition">
+                    ↺ Replay Experience
+                </button>
+                <div class="font-mono text-xs text-offWhite/55 uppercase tracking-[0.16em]">
+                    Built for CTS Govt. Polytechnic (Lal Bari) • DCST 2026–2027
+                </div>
+            </footer>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         IN-APP LIVE CAMERA SELFIE MODAL (FRONT/REAR FLIP + CLEAN TEARDOWN)
+    ===================================================================== -->
+    <div id="cameraModal" class="hidden fixed inset-0 z-[94] bg-black/92 backdrop-blur-md p-4 flex-col items-center justify-center">
+        <div class="w-full max-w-sm dcst-panel rounded-3xl p-4 border-2 border-cyberBlue flex flex-col gap-4">
+            <div class="flex items-center justify-between">
+                <span class="font-mono text-xs font-extrabold uppercase tracking-widest text-hackerGreen flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-lalRed animate-ping"></span>
+                    LIVE CAMERA SELFIE
+                </span>
+                <button id="btnCloseCamera" type="button" class="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 font-mono text-xs font-bold text-offWhite cursor-pointer">
+                    ✕ Close
+                </button>
+            </div>
+
+            <div class="relative w-full aspect-square rounded-2xl overflow-hidden bg-cyberBg border border-cyberBlue/45">
+                <video id="liveCamVideo" autoplay playsinline muted class="w-full h-full object-cover"></video>
+                <div class="pointer-events-none absolute inset-4 rounded-full border-2 border-dashed border-hackerGreen shadow-[0_0_0_9999px_rgba(6,9,15,0.56)]"></div>
+                <div id="camShutterFlash" class="hidden pointer-events-none absolute inset-0 bg-white z-20"></div>
+            </div>
+
+            <div class="flex items-center gap-2.5">
+                <button id="btnFlipCamera" type="button" class="min-h-[52px] px-4 py-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 font-mono text-xs font-bold text-offWhite cursor-pointer active:scale-95 transition">
+                    🔄 Flip
+                </button>
+                <button id="btnCaptureSelfie" type="button" class="flex-1 min-h-[52px] py-3 px-4 rounded-xl bg-hackerGreen hover:brightness-105 text-cyberBg font-display text-base font-extrabold uppercase tracking-wide cursor-pointer active:scale-95 transition">
+                    📸 CAPTURE SELFIE
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         APPLICATION ENGINE (100% SELF-CONTAINED VANILLA JS)
+    ===================================================================== -->
+    <script>
+        /* =====================================================================
+           1. GLOBAL STATE, SUSPENSE DATA & INCLUSIVE TITLES (ZERO DUPLICATES)
+        ===================================================================== */
+        const state = {
+            sfxEnabled: true,
+            audioUnlocked: false,
+            stage: 0,
+            introIdx: 0,
+            introThrowing: false,
+            t1DoorSlammed: false,
+            t1GameActive: false,
+            t1PagesCopied: 0,
+            t1TimeLeft: 12.0,
+            t1TimerId: null,
+            t1PopupId: null,
+            deckIdx: 0,
+            deckInFeedback: false,
+            deckTrapRetry: false,
+            oathSealed: false,
+            oathHolding: false,
+            oathHoldStart: 0,
+            oathRaf: null,
+            oathLastTapTime: 0,
+            oathVibId: null,
+            passName: '',
+            passAvatar: 'sigma',
+            passSelfieImg: null,
+            passTitle: 'Main Character (0% Attendance) ✨',
+            passStamp: 'LAL BARI VERIFIED',
+            passSerial: 'LB-26-' + String(Math.floor(1000 + Math.random() * 9000)),
+            camStream: null,
+            camFacing: 'user'
+        };
+
+        // Stage 1: Iconic Sigma quote appears ONLY HERE (never repeated elsewhere!)
+        const INTRO_BEATS = [
+            {
+                mood: 'cool',
+                text: 'Toh kaise hain aap log? Swagato amader Lal Bari-te — ar DCST-r hacker world-e!',
+                btn: 'NEXT →',
+                sticker: { text: 'LAL BARI × DCST 🏛️', bg: '#E11D2E', fg: '#F4F6FA', rot: '-4deg' }
+            },
+            {
+                mood: 'sigma',
+                text: 'Welcome to the place where your attendance matters more than your feelings... jiski waise bhi koi value nahi hai! 🕶️',
+                btn: 'NEXT →',
+                sticker: { text: 'SIGMA REALITY CHECK 💀', bg: '#FACC15', fg: '#06090F', rot: '4deg' }
+            },
+            {
+                mood: 'sneaky',
+                text: 'Boys hok ba Girls — prothom din ektu bhoy lagche toh? Lagai uchit! Tobey bhoy-er pichonei ache asli bhaichara. Mystery file chhurchi — catch kor!',
+                btn: 'CATCH MYSTERY FILE →',
+                sticker: { text: 'UNEXPECTED MODE ON ⚡', bg: '#00FF94', fg: '#06090F', rot: '-3deg' }
+            }
+        ];
+
+        // Stage 3: 5 Suspenseful Blind Cases — Front cards NEVER spoil the punchline!
+        const REALITY_DECK = [
+            {
+                tag: 'SEALED CASE #01 // MYSTERY BREAK',
+                title: '10 Minute-er Chhoto Break',
+                desc: 'Class-er majhe matro 10 minute break peyechish... bondhuder sathe campus-er ekta secret spot-e boshe porbi?',
+                art: 'mystery1',
+                yesHead: 'REVEAL: KALO PATHOR VIP ADDA! 🪨',
+                yesBody: '10 minute-er break kobe je Kalo Pathor-e boshe 2 ghonta hoye jabe, tui ter-o pabi na! Asol college life okhanei shuru hoy.',
+                noHead: 'WAIT FOR IT... KALO PATHOR CALLING! 🪨',
+                noBody: 'Aaj "na bhai" bolchish, kintu 2 soptaho por Kalo Pathor-e tor fixed seat book thakbe — boys & girls sobai okhanei mile!',
+                sticker: { text: 'KALO PATHOR HQ 🪨', bg: '#FACC15', fg: '#06090F', rot: '-5deg' },
+                seniorMood: 'laugh',
+                seniorLine: 'Kalo Pathor-e na boshle Lal Bari-r college life ekdom incomplete!'
+            },
+            {
+                tag: 'SEALED CASE #02 // OPERATION VANISH',
+                title: 'Boring Lecture + Khula Gate',
+                desc: 'Dupurer class bishon boring lagche, pasher friend chokh ishara korlo... chupichupi bag guchiye beriye jabi?',
+                art: 'mystery2',
+                yesHead: 'REVEAL: MAIDAN • VICTORIA • GANGAR PAAR! 🌊',
+                yesBody: 'Classic CTS escape route unlocked! Class bunk mere Maidan-er ghash, Victoria-r baire ba Gangar paar-er thanda hawa — pure therapy!',
+                noHead: 'GANGAR PAAR-ER HAWA MISS KORBI? 😂',
+                noBody: 'Eto bhalo student sajish na! Ekdin thik-i Maidan ba Gangar ghat-e Senior-der sathe direct dekha hoye jabe!',
+                sticker: { text: 'BUNK ROUTE UNLOCKED 🌊', bg: '#00D2FF', fg: '#06090F', rot: '5deg' },
+                seniorMood: 'cool',
+                seniorLine: 'Bunk marle smartly Maidan ba Gangar paare ja — gate-er samne dhora porish na!'
+            },
+            {
+                tag: 'SEALED CASE #03 // SILENT FREQUENCY',
+                title: 'Pasher Row-er Eye Contact',
+                desc: 'Lecture cholche, kintu pasher row theke keo bar-bar tor dike takachhe... chupichupi smile back korbi?',
+                art: 'mystery3',
+                yesHead: 'REVEAL: LUKIYE CLASS PREM! 👀',
+                yesBody: 'Bench-to-bench silent romance unlocked! Khali irritating Sir chokh tule takalei bolbi — "Sir, board-ta ektu bujhchilam!"',
+                noHead: 'MONK MODE ACTIVATED? 🤨',
+                noBody: 'Ghilu-te network nei naki? 2nd week-ei pasher row-er dike ghaar nije thekei ghure jabe!',
+                sticker: { text: 'SILENT EYE CONTACT 👀', bg: '#E11D2E', fg: '#F4F6FA', rot: '-4deg' },
+                seniorMood: 'sneaky',
+                seniorLine: 'Lukiye prem korish thik ache, kintu Senior-der CCTV radar theke kichu lukanor nei!'
+            },
+            {
+                tag: 'SEALED CASE #04 // 03:00 AM PROTOCOL',
+                title: 'Raat 3-tey WhatsApp Ping',
+                desc: 'Sokal 10-tay submission, ekhono ekta page-o lekha hoyni... bondhur theke PDF cheye full night-out marbi?',
+                art: 'mystery4',
+                yesHead: 'REVEAL: BIROKTIKOR ASSIGNMENT MAGIC! 📝',
+                yesBody: 'Welcome to the 3 AM Copy-Paste Club! Khali ekta pro tip — front page theke bondhur naam ar roll number change korte bhulish na!',
+                noHead: 'OVERCONFIDENT TOPPER ALERT! 😅',
+                noBody: 'Aaj nije likhbi bolchish, kintu submission-er ager raat 2-to-y group-e "PDF patha bhai/bon" message tui-i dibi!',
+                sticker: { text: '3 AM SURVIVOR 📝', bg: '#FACC15', fg: '#06090F', rot: '4deg' },
+                seniorMood: 'laugh',
+                seniorLine: 'Copy korbi kor, khali handwriting-ta ektu alada rakhish noile Sir dhore felben!'
+            },
+            {
+                tag: 'SEALED CASE #05 // FINAL MYSTERY',
+                title: 'No-Class Special Campus Day',
+                desc: 'Kono routine class nei, shudhu campus-e boro kichu aayojon cholche... "chhuti" bhebe bari paliye ghumabi?',
+                art: 'mystery5',
+                isProgramTrap: true,
+                yesHead: 'ABEY PALABI KOTHAY?! CAUGHT! 🚨',
+                yesBody: 'Class bunk marle oto chaap nei, kintu Social, Cultural, Sports, Saraswati Pujo, Biswakarma Pujo ar Tech Fest-e "bari jabo" bolle direct red card! Stage sajanor VIP labour theke free khawa — sobai mile moja korei kori! 😂🔥',
+                noHead: 'ASLI LAL BARI LEGEND! 🔥',
+                noBody: 'Ei toh! Class-e ghumaleo Saraswati Pujo, Biswakarma Pujo, Social, Cultural, Sports ar Tech Fest-e full squad energy — kaaj-er naam-e photo tola, adda ar fest vibes miss kora paap! 🎉😂',
+                sticker: { text: 'FEST MODE: 100% ON 🎉', bg: '#00FF94', fg: '#06090F', rot: '-4deg' },
+                trapSticker: { text: 'BUNK CAUGHT IN 4K 🚫', bg: '#E11D2E', fg: '#F4F6FA', rot: '5deg' },
+                seniorMood: 'sigma'
+            }
+        ];
+
+        // Inclusive Avatars (Stylish Boy, Stylish Girl, Gender-Neutral Cool, Fest Star)
+        const PASS_AVATARS = [
+            { id: 'sigma', label: 'Sigma Boy' },
+            { id: 'baddie', label: 'DCST Queen' },
+            { id: 'chill', label: 'Chill Vibe' },
+            { id: 'fest', label: 'Fest Star' }
+        ];
+
+        // 8 Punchy, Funny, Gen Z & Inclusive Titles (Boys & Girls Both Shine!)
+        const PASS_TITLES = [
+            'Main Character (0% Attendance) ✨',
+            'Unbothered Baddie / Sigma (74.9%) 💅',
+            'Delulu Is The Only Solulu 🌀',
+            'Certified Drama Royalty 👑',
+            '3 AM Overthinking Champion 🌙',
+            'Mentally In Bed 🛏️',
+            'Zero Syllabus, 100% Confidence 🕶️',
+            '10:31-er Banned Celebrity 🚪'
+        ];
+
+        const PASS_STAMPS = [
+            { id: 'LAL BARI VERIFIED', label: 'LAL BARI VERIFIED', bg: '#00FF94', fg: '#06090F', rot: '-4deg' },
+            { id: 'DCST HACKER ✓', label: 'DCST HACKER ✓', bg: '#00D2FF', fg: '#06090F', rot: '4deg' },
+            { id: '10:31 BANNED 🚪', label: '10:31 BANNED 🚪', bg: '#E11D2E', fg: '#F4F6FA', rot: '-4deg' },
+            { id: 'SENIOR APPROVED', label: 'SENIOR APPROVED', bg: '#FACC15', fg: '#06090F', rot: '4deg' }
+        ];
+
+        // 4 Super Cool, Distinct, Non-Repetitive Captions
+        const VIRAL_CAPTIONS = [
+            {
+                tag: 'CAPTION 01 // MAIN CHARACTER DROP',
+                text: 'New chapter, zero chill ⚡🏛️ Officially stepping into CTS Government Polytechnic — DCST 2026–2027. Lal Bari aura & hacker energy only. #LalBari #DCST2627 #CTSPolytechnic'
+            },
+            {
+                tag: 'CAPTION 02 // CAMPUS THERAPY',
+                text: '10:31-e gate bandho, 10 minute-er break-e 2 ghontar adda, ar dupure Gangar paar-er hawa 🌊🕶️ College life just hit different. #LalBariDiaries #DCSTSquad'
+            },
+            {
+                tag: 'CAPTION 03 // SENIOR BHAICHARA & FESTS',
+                text: 'Seniors dekhlei hashi mukhe respect (ar majhe majhe treat 🍕😂). Saraswati Pujo, Social, Sports to Tech Fest — DCST 26–27 is ready to own the campus! #DCSTFamily #SeniorApproved'
+            },
+            {
+                tag: 'CAPTION 04 // COLD GEN Z ONE-LINER',
+                text: 'Zero syllabus, 100% confidence, Mentally In Bed 🛏️✨ Collector Pass unlocked — hats off DCST Seniors for this wild welcome! #Freshers2026 #CTSLalBari #DCST'
+            }
+        ];
+
+        /* =====================================================================
+           2. WEB AUDIO SYNTHESIZER & HAPTIC ENGINE (FUNNY MEME & CARTOON SFX!)
+        ===================================================================== */
+        let audioCtx = null;
+
+        function ensureAudio() {
+            if (!audioCtx) {
+                const AudioCtx = window.AudioContext || window.webkitAudioContext;
+                if (AudioCtx) audioCtx = new AudioCtx();
+            }
+            if (audioCtx && audioCtx.state === 'suspended') {
+                audioCtx.resume().catch(() => {});
+            }
+            state.audioUnlocked = true;
+        }
+
+        function vibrate(pattern) {
+            try {
+                if (navigator && typeof navigator.vibrate === 'function') navigator.vibrate(pattern);
+            } catch (e) {}
+        }
+
+        const SFX = {
+            playTone(freq, type, duration, vol = 0.14, slideTo = null, delay = 0) {
+                if (!state.sfxEnabled) return;
+                try {
+                    ensureAudio();
+                    if (!audioCtx) return;
+                    const now = audioCtx.currentTime + delay;
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    osc.type = type;
+                    osc.frequency.setValueAtTime(freq, now);
+                    if (slideTo !== null) {
+                        osc.frequency.exponentialRampToValueAtTime(Math.max(20, slideTo), now + duration);
+                    }
+                    gain.gain.setValueAtTime(0.0001, now);
+                    gain.gain.linearRampToValueAtTime(vol, now + 0.015);
+                    gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    osc.start(now);
+                    osc.stop(now + duration + 0.02);
+                } catch (e) {}
+            },
+            click() {
+                this.playTone(580, 'triangle', 0.055, 0.11, 340);
+                vibrate(15);
+            },
+            gong() {
+                this.playTone(115, 'sine', 1.15, 0.22, 92);
+                this.playTone(230, 'triangle', 0.85, 0.13, 200, 0.03);
+                this.playTone(460, 'sine', 0.55, 0.08, 520, 0.08);
+                vibrate([45, 35, 70]);
+            },
+            whoosh() {
+                this.playTone(240, 'sawtooth', 0.32, 0.11, 960);
+                this.playTone(900, 'sine', 0.25, 0.11, 190, 0.12);
+                vibrate([30, 25, 45]);
+            },
+            doorSlam() {
+                this.playTone(145, 'sawtooth', 0.22, 0.24, 38);
+                this.playTone(75, 'square', 0.32, 0.22, 32, 0.04);
+                vibrate([85, 35, 110]);
+            },
+            sadTrombone() {
+                this.playTone(293.66, 'sawtooth', 0.22, 0.1, 285, 0.0);
+                this.playTone(277.18, 'sawtooth', 0.22, 0.1, 268, 0.22);
+                this.playTone(261.63, 'sawtooth', 0.22, 0.1, 250, 0.44);
+                this.playTone(246.94, 'sawtooth', 0.48, 0.12, 215, 0.66);
+            },
+            boing() {
+                this.playTone(195, 'sine', 0.22, 0.15, 480);
+                this.playTone(480, 'triangle', 0.15, 0.09, 290, 0.11);
+                vibrate(25);
+            },
+            success() {
+                this.playTone(523.25, 'triangle', 0.13, 0.13, null, 0);
+                this.playTone(659.25, 'triangle', 0.15, 0.13, null, 0.08);
+                this.playTone(783.99, 'sine', 0.26, 0.15, null, 0.16);
+                vibrate([22, 18, 30]);
+            },
+            buzz() {
+                this.playTone(155, 'sawtooth', 0.2, 0.17, 120);
+                this.playTone(115, 'square', 0.2, 0.13, 95, 0.07);
+                vibrate([55, 25, 55]);
+            },
+            gavel() {
+                this.playTone(130, 'square', 0.18, 0.24, 42);
+                this.playTone(90, 'sine', 0.38, 0.25, 40, 0.04);
+                this.playTone(523.25, 'triangle', 0.24, 0.13, null, 0.22);
+                this.playTone(659.25, 'triangle', 0.24, 0.13, null, 0.34);
+                this.playTone(783.99, 'triangle', 0.28, 0.14, null, 0.46);
+                this.playTone(1046.5, 'sine', 0.6, 0.17, null, 0.58);
+                vibrate([95, 45, 115, 35, 55]);
+            },
+            vineBoom() {
+                this.playTone(115, 'sine', 0.72, 0.34, 28, 0);
+                this.playTone(72, 'triangle', 0.58, 0.24, 24, 0.02);
+                vibrate([70, 30, 50]);
+            },
+            slideWhistle() {
+                this.playTone(340, 'sine', 0.18, 0.16, 1280, 0);
+                this.playTone(1280, 'sine', 0.22, 0.15, 420, 0.17);
+                vibrate([20, 20, 25]);
+            },
+            cartoonSlip() {
+                this.playTone(880, 'sine', 0.22, 0.15, 220, 0);
+                this.playTone(210, 'triangle', 0.14, 0.22, 95, 0.21);
+                this.playTone(460, 'sine', 0.12, 0.14, 680, 0.25);
+                vibrate([45, 25, 65]);
+            },
+            laughChuckle() {
+                const notes = [440, 560, 460, 590, 480];
+                notes.forEach((n, i) => {
+                    this.playTone(n, 'triangle', 0.09, 0.12, n * 0.86, i * 0.095);
+                });
+                vibrate([18, 25, 18, 25, 18]);
+            },
+            fanfare() {
+                this.playTone(523.25, 'sawtooth', 0.13, 0.09, null, 0);
+                this.playTone(659.25, 'sawtooth', 0.13, 0.09, null, 0.11);
+                this.playTone(783.99, 'sawtooth', 0.13, 0.09, null, 0.22);
+                this.playTone(1046.5, 'triangle', 0.55, 0.16, 1060, 0.34);
+                this.playTone(523.25, 'sine', 0.55, 0.14, null, 0.34);
+            },
+            shutter() {
+                this.playTone(1250, 'square', 0.035, 0.14, 320);
+                this.playTone(720, 'triangle', 0.05, 0.11, 240, 0.04);
+                vibrate(28);
+            }
+        };
+
+        /* =====================================================================
+           3. STYLISH SIGMA SENIOR HOST SVG + MYSTERY ART + INCLUSIVE AVATARS
+        ===================================================================== */
+        function getSeniorSVG(mood = 'cool') {
+            const animClass = mood === 'laugh' ? 'mood-laugh' : 'mood-float';
+            const showVisor = mood === 'cool' || mood === 'sigma';
+
+            const mouthMap = {
+                cool: '<path d="M89 109 Q102 117 116 106" stroke="#06090F" stroke-width="3.6" stroke-linecap="round" fill="none"/>',
+                sigma: '<path d="M90 109 Q106 113 118 103" stroke="#06090F" stroke-width="3.8" stroke-linecap="round" fill="none"/>',
+                scold: '<path d="M88 113 Q100 103 112 113" stroke="#06090F" stroke-width="3.6" stroke-linecap="round" fill="none"/>',
+                laugh: '<path d="M84 104 Q100 124 116 104 Z" fill="#9E1220" stroke="#06090F" stroke-width="3.2"/><path d="M89 106 H111" stroke="#F4F6FA" stroke-width="3.4" stroke-linecap="round"/>',
+                sneaky: '<path d="M87 109 Q104 117 117 102" stroke="#06090F" stroke-width="3.6" stroke-linecap="round" fill="none"/>',
+                shock: '<ellipse cx="100" cy="111" rx="8.5" ry="10" fill="#06090F"/>'
+            };
+
+            const eyesMarkup = showVisor
+                ? `
+                    <polygon points="62,76 96,74 94,91 66,92" fill="#06090F" stroke="#00D2FF" stroke-width="2.4"/>
+                    <polygon points="104,74 138,76 134,92 106,91" fill="#06090F" stroke="#00D2FF" stroke-width="2.4"/>
+                    <line x1="96" y1="80" x2="104" y2="80" stroke="#FACC15" stroke-width="2.6"/>
+                    <line x1="69" y1="79" x2="84" y2="88" stroke="#00FF94" stroke-width="2.6" stroke-linecap="round" opacity="0.85"/>
+                    <line x1="111" y1="79" x2="126" y2="88" stroke="#00D2FF" stroke-width="2.6" stroke-linecap="round" opacity="0.85"/>
+                `
+                : mood === 'laugh'
+                ? `
+                    <path d="M72 86 Q82 76 92 86" stroke="#06090F" stroke-width="3.8" stroke-linecap="round" fill="none"/>
+                    <path d="M108 86 Q118 76 128 86" stroke="#06090F" stroke-width="3.8" stroke-linecap="round" fill="none"/>
+                    <circle cx="68" cy="93" r="3.4" fill="#00D2FF"/>
+                    <circle cx="132" cy="93" r="3.4" fill="#00D2FF"/>
+                `
+                : `
+                    <ellipse cx="82" cy="84" rx="5" ry="5.5" fill="#06090F"/>
+                    <ellipse cx="118" cy="84" rx="5" ry="5.5" fill="#06090F"/>
+                    <circle cx="84" cy="82" r="1.8" fill="#00FF94"/>
+                    <circle cx="120" cy="82" r="1.8" fill="#00FF94"/>
+                `;
+
+            const browsMarkup = mood === 'scold'
+                ? '<line x1="69" y1="69" x2="93" y2="75" stroke="#06090F" stroke-width="3.8" stroke-linecap="round"/><line x1="131" y1="69" x2="107" y2="75" stroke="#06090F" stroke-width="3.8" stroke-linecap="round"/>'
+                : mood === 'sneaky'
+                ? '<path d="M69 71 Q82 64 93 71" stroke="#06090F" stroke-width="3.5" fill="none" stroke-linecap="round"/><line x1="107" y1="72" x2="131" y2="66" stroke="#06090F" stroke-width="3.5" stroke-linecap="round"/>'
+                : '<line x1="70" y1="69" x2="92" y2="68" stroke="#06090F" stroke-width="3.4" stroke-linecap="round"/><line x1="108" y1="68" x2="130" y2="69" stroke="#06090F" stroke-width="3.4" stroke-linecap="round"/>';
+
+            return `
+                <svg viewBox="0 0 200 220" class="w-full h-full ${animClass}" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="techJacket" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#182236"/>
+                            <stop offset="55%" stop-color="#0D1422"/>
+                            <stop offset="100%" stop-color="#070B13"/>
+                        </linearGradient>
+                        <linearGradient id="cyberGlow" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#00D2FF" stop-opacity="0.28"/>
+                            <stop offset="50%" stop-color="#E11D2E" stop-opacity="0.18"/>
+                            <stop offset="100%" stop-color="#00FF94" stop-opacity="0.25"/>
+                        </linearGradient>
+                    </defs>
+                    <circle cx="100" cy="108" r="78" fill="url(#cyberGlow)"/>
+                    <circle cx="100" cy="108" r="72" fill="none" stroke="#00D2FF" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="8 6"/>
+
+                    <path d="M22 220 C26 156 50 138 100 138 C150 138 174 156 178 220 Z" fill="url(#techJacket)" stroke="#00D2FF" stroke-width="2.6"/>
+                    <path d="M74 140 L100 176 L126 140 Z" fill="#070A12"/>
+                    <path d="M82 146 Q100 166 118 146" fill="none" stroke="#FACC15" stroke-width="2.6" stroke-linecap="round"/>
+                    <path d="M62 142 L78 168 L72 138 Z" fill="#131C2E" stroke="#00FF94" stroke-width="2"/>
+                    <path d="M138 142 L122 168 L128 138 Z" fill="#131C2E" stroke="#00FF94" stroke-width="2"/>
+                    <path d="M36 196 L64 168" stroke="#00D2FF" stroke-width="2.6" stroke-linecap="round" opacity="0.8"/>
+                    <path d="M164 196 L136 168" stroke="#00FF94" stroke-width="2.6" stroke-linecap="round" opacity="0.8"/>
+                    <path d="M68 192 H132 L138 220 H62 Z" fill="#0A101B" stroke="#00D2FF" stroke-opacity="0.45" stroke-width="2"/>
+                    <circle cx="132" cy="166" r="10.5" fill="#E11D2E" stroke="#FACC15" stroke-width="2.2"/>
+                    <text x="132" y="170" fill="#FACC15" font-family="Syne" font-size="8.5" font-weight="800" text-anchor="middle">LB</text>
+
+                    <rect x="87" y="116" width="26" height="28" rx="9" fill="#D5976E"/>
+                    <path d="M60 66 C60 36 140 36 140 66 V97 C140 116 120 134 100 134 C80 134 60 116 60 97 Z" fill="#E4A87E" stroke="#06090F" stroke-width="3.2"/>
+
+                    <circle cx="58" cy="89" r="6.8" fill="#D5976E" stroke="#06090F" stroke-width="2.4"/>
+                    <circle cx="56.5" cy="93.5" r="2.2" fill="#00FF94"/>
+                    <circle cx="142" cy="89" r="6.8" fill="#D5976E" stroke="#06090F" stroke-width="2.4"/>
+
+                    <path d="M54 74 C48 44 64 18 98 16 C128 14 150 32 146 72 C140 54 128 46 116 50 C108 38 88 38 76 52 C68 48 60 58 54 74 Z" fill="#0F1420" stroke="#06090F" stroke-width="2.6"/>
+                    <path d="M74 30 Q98 22 124 32" stroke="#00D2FF" stroke-opacity="0.55" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+                    <path d="M126 42 Q138 48 142 60" stroke="#00FF94" stroke-opacity="0.45" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+
+                    ${browsMarkup}
+                    ${eyesMarkup}
+                    <path d="M100 90 L97.5 98 H102.5" stroke="#A66B47" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    ${mouthMap[mood] || mouthMap.cool}
+                </svg>
+            `;
+        }
+
+        // Suspenseful Mystery Visuals (No Spoilers on Card Front!)
+        function getMysteryCardSVG(art) {
+            const configs = {
+                mystery1: { code: 'CASE // 01', icon: '⏳', sub: '10 MINUTE MYSTERY', c1: '#FACC15', c2: '#00D2FF' },
+                mystery2: { code: 'CASE // 02', icon: '🚪', sub: 'OPERATION VANISH', c1: '#00D2FF', c2: '#00FF94' },
+                mystery3: { code: 'CASE // 03', icon: '📡', sub: 'SILENT SIGNAL DETECTED', c1: '#E11D2E', c2: '#FACC15' },
+                mystery4: { code: 'CASE // 04', icon: '🌙', sub: '03:00 AM EMERGENCY', c1: '#FACC15', c2: '#00FF94' },
+                mystery5: { code: 'CASE // 05', icon: '🔒', sub: 'CLASSIFIED FINAL FILE', c1: '#E11D2E', c2: '#00FF94' }
+            };
+            const cfg = configs[art] || configs.mystery1;
+            return `
+                <svg viewBox="0 0 260 120" class="w-full h-full">
+                    <rect width="260" height="120" rx="14" fill="#070C16"/>
+                    <rect x="8" y="8" width="244" height="104" rx="10" fill="none" stroke="${cfg.c1}" stroke-opacity="0.45" stroke-width="1.6" stroke-dasharray="6 5"/>
+                    <circle cx="130" cy="54" r="30" fill="${cfg.c2}" fill-opacity="0.12" stroke="${cfg.c2}" stroke-width="2"/>
+                    <text x="130" y="63" font-size="26" text-anchor="middle">${cfg.icon}</text>
+                    <text x="130" y="24" fill="${cfg.c1}" font-family="JetBrains Mono" font-size="10" font-weight="800" text-anchor="middle">${cfg.code}</text>
+                    <text x="130" y="102" fill="#F4F6FA" font-family="JetBrains Mono" font-size="10.5" font-weight="800" text-anchor="middle">${cfg.sub}</text>
+                </svg>
+            `;
+        }
+
+        // Stylish Inclusive Avatars (Boy + Girl + Neutral + Fest)
+        function getPassAvatarSVG(avatarId) {
+            if (avatarId === 'sigma') return getSeniorSVG('sigma');
+
+            if (avatarId === 'baddie') {
+                return `
+                    <svg viewBox="0 0 200 200" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="200" height="200" fill="#0B1322"/>
+                        <circle cx="100" cy="98" r="72" fill="rgba(225,29,46,0.16)"/>
+                        <path d="M44 68 C40 24 160 24 156 68 L166 172 C142 184 58 184 34 172 Z" fill="#131724" stroke="#06090F" stroke-width="3"/>
+                        <path d="M32 200 C36 148 62 134 100 134 C138 134 164 148 168 200 Z" fill="#182338" stroke="#FACC15" stroke-width="3"/>
+                        <path d="M84 142 Q100 160 116 142" fill="none" stroke="#00FF94" stroke-width="2.8" stroke-linecap="round"/>
+                        <circle cx="130" cy="164" r="9" fill="#E11D2E" stroke="#FACC15" stroke-width="2"/>
+                        <rect x="88" y="112" width="24" height="26" rx="9" fill="#DDA078"/>
+                        <path d="M62 64 C62 36 138 36 138 64 V95 C138 117 120 128 100 128 C80 128 62 117 62 95 Z" fill="#EBB38B" stroke="#06090F" stroke-width="3"/>
+                        <path d="M58 68 C62 32 138 30 142 68 C126 50 96 48 64 68 Z" fill="#131724"/>
+                        <path d="M74 42 Q104 34 128 46" stroke="#00D2FF" stroke-opacity="0.55" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        <circle cx="58" cy="96" r="7" fill="none" stroke="#FACC15" stroke-width="2.6"/>
+                        <circle cx="142" cy="96" r="7" fill="none" stroke="#FACC15" stroke-width="2.6"/>
+                        <polygon points="62,74 95,77 92,91 66,90" fill="#06090F" stroke="#FACC15" stroke-width="2.3"/>
+                        <polygon points="105,77 138,74 134,90 108,91" fill="#06090F" stroke="#FACC15" stroke-width="2.3"/>
+                        <line x1="95" y1="81" x2="105" y2="81" stroke="#FACC15" stroke-width="2.3"/>
+                        <line x1="70" y1="79" x2="83" y2="87" stroke="#00FF94" stroke-width="2.2" stroke-linecap="round"/>
+                        <line x1="114" y1="79" x2="127" y2="87" stroke="#00D2FF" stroke-width="2.2" stroke-linecap="round"/>
+                        <path d="M89 106 Q100 115 111 105" stroke="#B91C1C" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+                    </svg>
+                `;
+            }
+
+            if (avatarId === 'chill') {
+                return `
+                    <svg viewBox="0 0 200 200" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="200" height="200" fill="#09131D"/>
+                        <path d="M28 200 C32 146 58 132 100 132 C142 132 168 146 172 200 Z" fill="#1E293B" stroke="#00FF94" stroke-width="3"/>
+                        <rect x="86" y="110" width="28" height="26" rx="10" fill="#DDA078"/>
+                        <path d="M60 66 C60 38 140 38 140 66 V96 C140 118 122 128 100 128 C78 128 60 118 60 96 Z" fill="#E6AD84" stroke="#06090F" stroke-width="3"/>
+                        <path d="M44 62 Q100 48 156 62 L144 36 C130 22 70 22 56 36 Z" fill="#0F172A" stroke="#00D2FF" stroke-width="2.8"/>
+                        <line x1="56" y1="50" x2="144" y2="50" stroke="#FACC15" stroke-width="3"/>
+                        <line x1="72" y1="84" x2="92" y2="84" stroke="#06090F" stroke-width="3.8" stroke-linecap="round"/>
+                        <line x1="108" y1="84" x2="128" y2="84" stroke="#06090F" stroke-width="3.8" stroke-linecap="round"/>
+                        <path d="M88 104 Q102 114 114 103" stroke="#06090F" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                    </svg>
+                `;
+            }
+
+            return `
+                <svg viewBox="0 0 200 200" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="200" fill="#180A10"/>
+                    <path d="M28 200 C32 146 58 132 100 132 C142 132 168 146 172 200 Z" fill="#E11D2E" stroke="#FACC15" stroke-width="3"/>
+                    <rect x="86" y="110" width="28" height="26" rx="10" fill="#DDA078"/>
+                    <path d="M60 64 C60 36 140 36 140 64 V96 C140 118 122 128 100 128 C78 128 60 118 60 96 Z" fill="#E6AD84" stroke="#06090F" stroke-width="3"/>
+                    <path d="M56 66 C56 26 144 26 144 66 C130 46 70 46 56 66 Z" fill="#141824"/>
+                    <path d="M74 84 Q84 74 94 84" stroke="#06090F" stroke-width="3.8" fill="none" stroke-linecap="round"/>
+                    <path d="M106 84 Q116 74 126 84" stroke="#06090F" stroke-width="3.8" fill="none" stroke-linecap="round"/>
+                    <path d="M86 102 Q100 118 114 102 Z" fill="#9E1220" stroke="#06090F" stroke-width="2.8"/>
+                    <text x="158" y="46" font-size="24" text-anchor="middle">✨</text>
+                </svg>
+            `;
+        }
+
+        /* =====================================================================
+           4. UI HELPERS (TOAST, FLASH, STAGE SWITCH, CLEAN BOTTOM DOCK, CONFETTI)
+        ===================================================================== */
+        let toastTimer = null;
+        function showToast(msg, ms = 4000) {
+            const box = document.getElementById('toastBox');
+            if (!box) return;
+            box.textContent = msg;
+            box.classList.remove('hidden');
+            box.classList.add('anim-fade-up');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => box.classList.add('hidden'), ms);
+        }
+
+        function triggerFlash(color = 'rgba(0, 255, 148, 0.45)') {
+            const ov = document.getElementById('flashOverlay');
+            if (!ov) return;
+            ov.style.background = color;
+            ov.classList.remove('hidden', 'anim-flash');
+            void ov.offsetWidth;
+            ov.classList.add('anim-flash');
+            setTimeout(() => ov.classList.add('hidden'), 640);
+        }
+
+        function showTransition(label, onSwitch) {
+            const curtain = document.getElementById('transitionCurtain');
+            const lbl = document.getElementById('transitionLabel');
+            if (lbl) lbl.textContent = label;
+            curtain.classList.remove('hidden');
+            curtain.classList.add('flex');
+            setTimeout(() => {
+                if (typeof onSwitch === 'function') onSwitch();
+            }, 250);
+            setTimeout(() => {
+                curtain.classList.add('hidden');
+                curtain.classList.remove('flex');
+            }, 580);
+        }
+
+        const STAGE_TAGS = {
+            0: 'LOCKED',
+            1: 'BRIEFING',
+            2: 'FILE 01',
+            3: 'FILE 02',
+            4: 'FINAL SEAL',
+            5: 'VERIFIED ✓'
+        };
+
+        function showStage(num) {
+            state.stage = num;
+            for (let i = 0; i <= 5; i++) {
+                const el = document.getElementById('stage' + i);
+                if (!el) continue;
+                if (i === num) {
+                    el.classList.remove('hidden');
+                    el.classList.add('flex');
+                } else {
+                    el.classList.add('hidden');
+                    el.classList.remove('flex');
+                }
+            }
+            const tag = document.getElementById('headerFileTag');
+            if (tag) tag.textContent = STAGE_TAGS[num] || 'LOCKED';
+            window.scrollTo({ top: 0, behavior: 'instant' });
+        }
+
+        function showSeniorDock({ mood = 'cool', text = '' }) {
+            const wrap = document.getElementById('seniorDockWrap');
+            const card = document.getElementById('seniorDockCard');
+            const expandBtn = document.getElementById('btnExpandDock');
+            const avatarMount = document.getElementById('dockAvatarMount');
+            const speechEl = document.getElementById('dockSpeechText');
+            if (!wrap || !card) return;
+
+            avatarMount.innerHTML = getSeniorSVG(mood);
+            speechEl.textContent = text;
+
+            wrap.classList.remove('hidden');
+            card.classList.remove('hidden', 'anim-dock-up');
+            void card.offsetWidth;
+            card.classList.add('anim-dock-up');
+            expandBtn.classList.add('hidden');
+            expandBtn.classList.remove('flex');
+        }
+
+        function hideSeniorDock() {
+            const wrap = document.getElementById('seniorDockWrap');
+            if (wrap) wrap.classList.add('hidden');
+        }
+
+        document.getElementById('btnCollapseDock').addEventListener('click', () => {
+            SFX.click();
+            document.getElementById('seniorDockCard').classList.add('hidden');
+            const exp = document.getElementById('btnExpandDock');
+            exp.classList.remove('hidden');
+            exp.classList.add('flex');
+        });
+
+        document.getElementById('btnExpandDock').addEventListener('click', () => {
+            SFX.boing();
+            document.getElementById('seniorDockCard').classList.remove('hidden');
+            const exp = document.getElementById('btnExpandDock');
+            exp.classList.add('hidden');
+            exp.classList.remove('flex');
+        });
+
+        document.getElementById('btnAudioToggle').addEventListener('click', (e) => {
+            e.stopPropagation();
+            state.sfxEnabled = !state.sfxEnabled;
+            document.getElementById('audioIcon').textContent = state.sfxEnabled ? '🔊' : '🔇';
+            document.getElementById('audioLabel').textContent = state.sfxEnabled ? 'ON' : 'OFF';
+            if (state.sfxEnabled) {
+                ensureAudio();
+                SFX.click();
+            }
+        });
+
+        function fireConfetti() {
+            const canvas = document.getElementById('confettiCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            canvas.width = window.innerWidth * dpr;
+            canvas.height = window.innerHeight * dpr;
+            ctx.scale(dpr, dpr);
+
+            const colors = ['#E11D2E', '#FACC15', '#00FF94', '#00D2FF', '#F4F6FA'];
+            const pieces = [];
+            for (let i = 0; i < 120; i++) {
+                pieces.push({
+                    x: window.innerWidth * (0.2 + Math.random() * 0.6),
+                    y: window.innerHeight * 0.45 + (Math.random() - 0.5) * 80,
+                    vx: (Math.random() - 0.5) * 14,
+                    vy: -6 - Math.random() * 12,
+                    w: 6 + Math.random() * 8,
+                    h: 4 + Math.random() * 6,
+                    color: colors[i % colors.length],
+                    rot: Math.random() * Math.PI * 2,
+                    vrot: (Math.random() - 0.5) * 0.28,
+                    life: 1
+                });
+            }
+
+            let frame = 0;
+            function tick() {
+                ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+                let alive = false;
+                for (const p of pieces) {
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    p.vy += 0.34;
+                    p.vx *= 0.99;
+                    p.rot += p.vrot;
+                    if (frame > 75) p.life -= 0.02;
+                    if (p.life > 0 && p.y < window.innerHeight + 40) {
+                        alive = true;
+                        ctx.save();
+                        ctx.globalAlpha = Math.max(0, p.life);
+                        ctx.translate(p.x, p.y);
+                        ctx.rotate(p.rot);
+                        ctx.fillStyle = p.color;
+                        ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+                        ctx.restore();
+                    }
+                }
+                frame++;
+                if (alive && frame < 170) requestAnimationFrame(tick);
+                else ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+            }
+            requestAnimationFrame(tick);
+        }
+
+        /* =====================================================================
+           5. STAGE 0 & STAGE 1 — UNLOCK & STYLISH HOST INTRO
+        ===================================================================== */
+        function openSummons() {
+            if (state.stage !== 0) return;
+            ensureAudio();
+            SFX.gong();
+            triggerFlash('rgba(0, 210, 255, 0.36)');
+            showTransition('CONNECTING TO DCST HOST...', () => {
+                showStage(1);
+                state.introIdx = 0;
+                state.introThrowing = false;
+                renderIntroBeat(true);
+            });
+        }
+
+        document.getElementById('btnOpenSummons').addEventListener('click', (e) => {
+            e.stopPropagation();
+            openSummons();
+        });
+        document.getElementById('stage0').addEventListener('click', openSummons);
+
+        function renderIntroBeat(isFirst = false) {
+            const beat = INTRO_BEATS[state.introIdx];
+            if (!beat) return;
+
+            const mount = document.getElementById('introSeniorMount');
+            mount.innerHTML = getSeniorSVG(beat.mood);
+            if (isFirst) {
+                mount.classList.remove('anim-host-enter');
+                void mount.offsetWidth;
+                mount.classList.add('anim-host-enter');
+            }
+
+            document.getElementById('introStickerSlot').innerHTML = `
+                <span class="sticker-pill" style="background:${beat.sticker.bg};color:${beat.sticker.fg};--rot:${beat.sticker.rot};">
+                    ${beat.sticker.text}
+                </span>
+            `;
+
+            document.getElementById('introBeatLabel').textContent = `${state.introIdx + 1} / ${INTRO_BEATS.length}`;
+            document.getElementById('introDialogueText').textContent = beat.text;
+            document.getElementById('btnIntroNext').textContent = beat.btn;
+
+            if (state.introIdx === 1) {
+                setTimeout(() => SFX.vineBoom(), 140);
+            }
+
+            for (let i = 0; i < 3; i++) {
+                const dot = document.getElementById('introDot' + i);
+                if (!dot) continue;
+                dot.className = i === state.introIdx
+                    ? 'h-2 w-8 rounded-full bg-hackerGreen transition-all'
+                    : i < state.introIdx
+                    ? 'h-2 w-4 rounded-full bg-holud transition-all'
+                    : 'h-2 w-3.5 rounded-full bg-white/20 transition-all';
+            }
+        }
+
+        document.getElementById('btnIntroNext').addEventListener('click', () => {
+            if (state.introThrowing) return;
+            if (state.introIdx < INTRO_BEATS.length - 1) {
+                SFX.click();
+                state.introIdx++;
+                renderIntroBeat(false);
+            } else {
+                state.introThrowing = true;
+                SFX.whoosh();
+                const proj = document.getElementById('sealCardProjectile');
+                proj.classList.remove('hidden', 'anim-card-throw');
+                void proj.offsetWidth;
+                proj.classList.add('anim-card-throw');
+
+                setTimeout(() => triggerFlash('rgba(250, 204, 21, 0.85)'), 440);
+                setTimeout(() => {
+                    proj.classList.add('hidden');
+                    state.introThrowing = false;
+                    initStage2();
+                }, 660);
+            }
+        });
+
+        /* =====================================================================
+           6. STAGE 2 — MYSTERY FILE 01 (10:31 AM SURPRISE → EMERGENCY RESCUE)
+        ===================================================================== */
+        function initStage2() {
+            clearInterval(state.t1TimerId);
+            clearInterval(state.t1PopupId);
+            state.t1DoorSlammed = false;
+            state.t1GameActive = false;
+            state.t1PagesCopied = 0;
+            state.t1TimeLeft = 12.0;
+
+            showStage(2);
+            document.getElementById('t1PhaseTag').textContent = 'UNOPENED';
+            const slot = document.getElementById('t1StickerSlot');
+            slot.innerHTML = '';
+            slot.classList.add('hidden');
+            slot.classList.remove('flex');
+
+            document.getElementById('t1DoorView').classList.remove('hidden');
+            document.getElementById('t1DoorView').classList.add('flex');
+            document.getElementById('t1TeacherView').classList.add('hidden');
+            document.getElementById('t1TeacherView').classList.remove('flex');
+            document.getElementById('t1GameView').classList.add('hidden');
+            document.getElementById('t1GameView').classList.remove('flex');
+            document.getElementById('t1PostGameRow').classList.add('hidden');
+            document.getElementById('t1PostGameRow').classList.remove('flex');
+
+            showSeniorDock({
+                mood: 'sneaky',
+                text: 'Matro 1 minute late hoyeche! Full confidence niye darja thele dhuke jaa, kichu hobe na — trust me!'
+            });
+        }
+
+        document.getElementById('btnHeroEntry').addEventListener('click', () => {
+            if (state.t1DoorSlammed) return;
+            state.t1DoorSlammed = true;
+            SFX.doorSlam();
+            setTimeout(() => SFX.sadTrombone(), 260);
+            setTimeout(() => SFX.laughChuckle(), 1050);
+            triggerFlash('rgba(225, 29, 46, 0.52)');
+
+            const card = document.getElementById('t1Card');
+            card.classList.remove('anim-shake');
+            void card.offsetWidth;
+            card.classList.add('anim-shake');
+
+            document.getElementById('t1PhaseTag').textContent = 'DENIED 🚪';
+            document.getElementById('t1DoorView').classList.add('hidden');
+            document.getElementById('t1DoorView').classList.remove('flex');
+            document.getElementById('t1TeacherView').classList.remove('hidden');
+            document.getElementById('t1TeacherView').classList.add('flex');
+
+            const slot = document.getElementById('t1StickerSlot');
+            slot.innerHTML = `<div class="stamp-badge text-lalRed bg-cyberBg" style="--rot:-4deg;">10:31 BANNED 🚪</div>`;
+            slot.classList.remove('hidden');
+            slot.classList.add('flex');
+
+            showSeniorDock({
+                mood: 'laugh',
+                text: 'Re gadhar brain niye asha genius! 10:30-er class-e 10:31 hole Lal Bari-te entry bandho! Ebar secret backup plan khol!'
+            });
+        });
+
+        document.getElementById('btnStartAssignGame').addEventListener('click', () => {
+            SFX.click();
+            startAssignmentRescue();
+        });
+
+        function startAssignmentRescue() {
+            clearInterval(state.t1TimerId);
+            clearInterval(state.t1PopupId);
+            state.t1GameActive = true;
+            state.t1PagesCopied = 0;
+            state.t1TimeLeft = 12.0;
+
+            document.getElementById('t1PhaseTag').textContent = 'LIVE RESCUE';
+            const slot = document.getElementById('t1StickerSlot');
+            slot.innerHTML = '';
+            slot.classList.add('hidden');
+            slot.classList.remove('flex');
+
+            document.getElementById('t1TeacherView').classList.add('hidden');
+            document.getElementById('t1TeacherView').classList.remove('flex');
+            document.getElementById('t1GameView').classList.remove('hidden');
+            document.getElementById('t1GameView').classList.add('flex');
+            document.getElementById('t1PostGameRow').classList.add('hidden');
+            document.getElementById('t1PostGameRow').classList.remove('flex');
+            document.querySelectorAll('.assign-distraction').forEach(el => el.remove());
+
+            const btnCopy = document.getElementById('btnCopyPage');
+            btnCopy.disabled = false;
+            btnCopy.classList.remove('opacity-40');
+            updateAssignHUD();
+
+            showSeniorDock({
+                mood: 'cool',
+                text: 'Green button 6 bar tap kore biroktikor assignment copy kor — red distraction pop-up touch korish na!'
+            });
+
+            state.t1TimerId = setInterval(() => {
+                if (!state.t1GameActive) return;
+                state.t1TimeLeft = Math.max(0, +(state.t1TimeLeft - 0.1).toFixed(1));
+                updateAssignHUD();
+                if (state.t1TimeLeft <= 0) finishAssignmentRescue(false);
+            }, 100);
+
+            state.t1PopupId = setInterval(() => {
+                if (!state.t1GameActive) return;
+                spawnAssignDistraction();
+            }, 1450);
+        }
+
+        function updateAssignHUD() {
+            document.getElementById('assignTimerBadge').textContent = state.t1TimeLeft.toFixed(1) + 's';
+            document.getElementById('assignCountLabel').textContent = `${state.t1PagesCopied} / 6 PAGES`;
+            document.getElementById('assignProgressBar').style.width = Math.min(100, (state.t1PagesCopied / 6) * 100) + '%';
+        }
+
+        function spawnAssignDistraction() {
+            const arena = document.getElementById('assignArena');
+            if (!arena) return;
+            const labels = ['Eye Contact 👀', 'Reels Scroll 📱', 'Sleepy Mode 😴'];
+            const el = document.createElement('button');
+            el.type = 'button';
+            el.className = 'assign-distraction absolute z-20 px-3 py-2 rounded-xl bg-lalRed text-offWhite border-2 border-holud font-sans text-xs font-extrabold shadow-xl cursor-pointer anim-fade-up';
+            el.textContent = labels[Math.floor(Math.random() * labels.length)];
+            const corners = [
+                { left: '10px', top: '10px' },
+                { right: '10px', top: '10px' },
+                { left: '10px', bottom: '10px' },
+                { right: '10px', bottom: '10px' }
+            ];
+            Object.assign(el.style, corners[Math.floor(Math.random() * corners.length)]);
+
+            el.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (!state.t1GameActive) return;
+                SFX.cartoonSlip();
+                state.t1TimeLeft = Math.max(0, +(state.t1TimeLeft - 0.8).toFixed(1));
+                updateAssignHUD();
+                showToast('👀 Distracted! -0.8s — Assignment-e focus rakh!', 2600);
+                el.remove();
+            });
+
+            arena.appendChild(el);
+            setTimeout(() => { if (el.parentNode) el.remove(); }, 1550);
+        }
+
+        document.getElementById('btnCopyPage').addEventListener('click', () => {
+            if (!state.t1GameActive) return;
+            SFX.success();
+            state.t1PagesCopied++;
+            updateAssignHUD();
+            if (state.t1PagesCopied >= 6) finishAssignmentRescue(true);
+        });
+
+        function finishAssignmentRescue(won) {
+            state.t1GameActive = false;
+            clearInterval(state.t1TimerId);
+            clearInterval(state.t1PopupId);
+            document.querySelectorAll('.assign-distraction').forEach(el => el.remove());
+
+            const btnCopy = document.getElementById('btnCopyPage');
+            btnCopy.disabled = true;
+            btnCopy.classList.add('opacity-40');
+
+            const postRow = document.getElementById('t1PostGameRow');
+            postRow.classList.remove('hidden');
+            postRow.classList.add('flex');
+
+            const slot = document.getElementById('t1StickerSlot');
+            slot.classList.remove('hidden');
+            slot.classList.add('flex');
+
+            if (won) {
+                SFX.success();
+                document.getElementById('t1PhaseTag').textContent = 'CLEARED ✓';
+                slot.innerHTML = `<div class="stamp-badge text-hackerGreen bg-cyberBg" style="--rot:-4deg;">ASSIGNMENT SAVED ✓</div>`;
+                showSeniorDock({
+                    mood: 'sigma',
+                    text: 'Solid speed! Ebar Mystery File 02 khol — 5-ta blind scenario ache, dekhchi koto-ta unexpected handle korte parish!'
+                });
+            } else {
+                SFX.sadTrombone();
+                document.getElementById('t1PhaseTag').textContent = 'BAILED OUT';
+                slot.innerHTML = `<div class="stamp-badge text-holud bg-cyberBg" style="--rot:4deg;">SENIOR BAILOUT 🤝</div>`;
+                showSeniorDock({
+                    mood: 'laugh',
+                    text: 'Time sesh, kintu Senior bhaichara-te toke pass koriye dilam — ebar Mystery File 02-te aay!'
+                });
+            }
+        }
+
+        document.getElementById('btnToStage3').addEventListener('click', () => {
+            SFX.click();
+            showTransition('DECRYPTING MYSTERY FILE 02...', () => initStage3());
+        });
+
+        /* =====================================================================
+           7. STAGE 3 — 5 SUSPENSEFUL BLIND CASES (UNEXPECTED TWISTS!)
+        ===================================================================== */
+        function initStage3() {
+            state.deckIdx = 0;
+            state.deckInFeedback = false;
+            state.deckTrapRetry = false;
+            showStage(3);
+            renderDeckCard();
+            showSeniorDock({
+                mood: 'cool',
+                text: '5-ta sealed mystery case — agey theke kichu jana jabe na! Swipe kor ba button chap, tarpor dekh asli twist!'
+            });
+        }
+
+        function renderDeckCard() {
+            const cardData = REALITY_DECK[state.deckIdx];
+            if (!cardData) return;
+
+            state.deckInFeedback = false;
+            state.deckTrapRetry = false;
+
+            document.getElementById('deckCounterBadge').textContent = `CASE ${state.deckIdx + 1} / ${REALITY_DECK.length}`;
+            const swipeCard = document.getElementById('swipeCard');
+            const feedbackBox = document.getElementById('swipeFeedbackBox');
+            const actionBtns = document.getElementById('deckActionButtons');
+
+            swipeCard.style.transform = '';
+            swipeCard.style.opacity = '1';
+            swipeCard.classList.remove('hidden');
+            swipeCard.classList.add('flex');
+            feedbackBox.classList.add('hidden');
+            feedbackBox.classList.remove('flex');
+            actionBtns.classList.remove('hidden');
+            actionBtns.classList.add('grid');
+
+            document.getElementById('swipeOverlayStamp').classList.add('hidden');
+            document.getElementById('swipeVisualBox').innerHTML = getMysteryCardSVG(cardData.art);
+            document.getElementById('swipeCardTag').textContent = cardData.tag;
+            document.getElementById('swipeCardTitle').textContent = cardData.title;
+            document.getElementById('swipeCardDesc').textContent = cardData.desc;
+
+            if (cardData.isProgramTrap) {
+                showSeniorDock({
+                    mood: 'sneaky',
+                    text: 'Last mystery file... bhebe-chinte uttor dish, ekhane ekta boro twist lukano ache!'
+                });
+            }
+        }
+
+        function handleDeckChoice(isYes) {
+            if (state.deckInFeedback) return;
+            const cardData = REALITY_DECK[state.deckIdx];
+            if (!cardData) return;
+            state.deckInFeedback = true;
+
+            document.getElementById('swipeCard').classList.add('hidden');
+            document.getElementById('swipeCard').classList.remove('flex');
+            document.getElementById('deckActionButtons').classList.add('hidden');
+            document.getElementById('deckActionButtons').classList.remove('grid');
+
+            const feedbackBox = document.getElementById('swipeFeedbackBox');
+            feedbackBox.classList.remove('hidden');
+            feedbackBox.classList.add('flex');
+
+            const btnNext = document.getElementById('btnDeckNext');
+
+            if (cardData.isProgramTrap && isYes) {
+                state.deckTrapRetry = true;
+                SFX.cartoonSlip();
+                setTimeout(() => SFX.vineBoom(), 260);
+                triggerFlash('rgba(225, 29, 46, 0.48)');
+                document.getElementById('swipeFeedbackSticker').innerHTML = `
+                    <span class="sticker-pill" style="background:${cardData.trapSticker.bg};color:${cardData.trapSticker.fg};--rot:${cardData.trapSticker.rot};">
+                        ${cardData.trapSticker.text}
+                    </span>
+                `;
+                document.getElementById('swipeFeedbackHead').textContent = cardData.yesHead;
+                document.getElementById('swipeFeedbackBody').textContent = cardData.yesBody;
+                btnNext.textContent = '↺ RETRY CASE 5 & CHOOSE RIGHT';
+                showSeniorDock({
+                    mood: 'scold',
+                    text: 'Arey chhuti bhebe bari palachhish?! Pujo, Social, Sports ar Tech Fest-e photo tola, adda ar kaaj kora mandatory — retry kor!'
+                });
+                return;
+            }
+
+            if (cardData.seniorMood === 'laugh') SFX.laughChuckle();
+            else SFX.boing();
+            const st = cardData.sticker;
+            document.getElementById('swipeFeedbackSticker').innerHTML = `
+                <span class="sticker-pill" style="background:${st.bg};color:${st.fg};--rot:${st.rot};">
+                    ${st.text}
+                </span>
+            `;
+            document.getElementById('swipeFeedbackHead').textContent = isYes ? cardData.yesHead : cardData.noHead;
+            document.getElementById('swipeFeedbackBody').textContent = isYes ? cardData.yesBody : cardData.noBody;
+
+            const isLast = state.deckIdx === REALITY_DECK.length - 1;
+            btnNext.textContent = isLast ? 'ENTER FINAL SEALED CHAMBER →' : 'NEXT MYSTERY →';
+
+            showSeniorDock({
+                mood: cardData.seniorMood || 'cool',
+                text: cardData.isProgramTrap
+                    ? 'Ekdom solid! Class-e attendance kom thakleo Fest ar Pujo-te full squad attendance 100%!'
+                    : cardData.seniorLine
+            });
+        }
+
+        document.getElementById('btnSwipeNo').addEventListener('click', () => handleDeckChoice(false));
+        document.getElementById('btnSwipeYes').addEventListener('click', () => handleDeckChoice(true));
+
+        document.getElementById('btnDeckNext').addEventListener('click', () => {
+            SFX.click();
+            if (state.deckTrapRetry) {
+                renderDeckCard();
+                return;
+            }
+            if (state.deckIdx < REALITY_DECK.length - 1) {
+                state.deckIdx++;
+                renderDeckCard();
+            } else {
+                showTransition('OPENING FINAL CHAMBER...', () => initStage4());
+            }
+        });
+
+        (function setupCardDrag() {
+            const card = document.getElementById('swipeCard');
+            const overlay = document.getElementById('swipeOverlayStamp');
+            let dragging = false, startX = 0, currentX = 0;
+
+            card.addEventListener('pointerdown', (e) => {
+                if (state.deckInFeedback) return;
+                dragging = true;
+                startX = e.clientX;
+                currentX = 0;
+                card.style.transition = 'none';
+                card.setPointerCapture(e.pointerId);
+            });
+
+            card.addEventListener('pointermove', (e) => {
+                if (!dragging) return;
+                currentX = e.clientX - startX;
+                card.style.transform = `translateX(${currentX}px) rotate(${currentX * 0.055}deg)`;
+                if (Math.abs(currentX) > 36) {
+                    overlay.classList.remove('hidden');
+                    overlay.textContent = currentX > 0 ? '✓ FULL READY' : '✕ NA BHAI';
+                    overlay.style.borderColor = currentX > 0 ? '#00FF94' : '#E11D2E';
+                    overlay.style.color = currentX > 0 ? '#00FF94' : '#E11D2E';
+                    overlay.style.background = 'rgba(6,9,15,0.9)';
+                } else {
+                    overlay.classList.add('hidden');
+                }
+            });
+
+            function endDrag() {
+                if (!dragging) return;
+                dragging = false;
+                card.style.transition = 'transform 0.24s ease';
+                if (currentX > 85) handleDeckChoice(true);
+                else if (currentX < -85) handleDeckChoice(false);
+                else {
+                    card.style.transform = '';
+                    overlay.classList.add('hidden');
+                }
+            }
+            card.addEventListener('pointerup', endDrag);
+            card.addEventListener('pointercancel', endDrag);
+        })();
+
+        /* =====================================================================
+           8. STAGE 4 — FINAL SEALED CHAMBER (OATH & DODGING REFUSE BUTTON)
+        ===================================================================== */
+        function initStage4() {
+            state.oathSealed = false;
+            state.oathHolding = false;
+            cancelAnimationFrame(state.oathRaf);
+            clearInterval(state.oathVibId);
+
+            showStage(4);
+            document.querySelectorAll('.oath-check').forEach(cb => {
+                cb.checked = false;
+                cb.closest('.oath-clause').style.borderColor = 'rgba(255,255,255,0.15)';
+            });
+
+            resetSealProgressUI();
+            const refuseMsg = document.getElementById('refuseMsgDisplay');
+            if (refuseMsg) {
+                refuseMsg.textContent = '';
+                refuseMsg.classList.add('hidden');
+            }
+            requestAnimationFrame(() => placeRefuseButton(true));
+
+            showSeniorDock({
+                mood: 'sigma',
+                text: 'Last step! 3-te clause tick kore Official Seal stamp kor — ar Refuse button-e haath diye dekh ki hoy 😂'
+            });
+        }
+
+        document.querySelectorAll('.oath-check').forEach(cb => {
+            cb.addEventListener('change', () => {
+                SFX.click();
+                cb.closest('.oath-clause').style.borderColor = cb.checked ? '#00FF94' : 'rgba(255,255,255,0.15)';
+            });
+        });
+
+        function allClausesChecked() {
+            const checks = Array.from(document.querySelectorAll('.oath-check'));
+            return checks.length > 0 && checks.every(c => c.checked);
+        }
+
+        function placeRefuseButton(center = false) {
+            const box = document.getElementById('refusePlayground');
+            const btn = document.getElementById('btnRefuseOrder');
+            if (!box || !btn) return;
+            const padX = 12;
+            const minTop = 28;
+            const maxX = Math.max(padX, box.clientWidth - btn.offsetWidth - padX);
+            const maxY = Math.max(minTop, box.clientHeight - btn.offsetHeight - 10);
+            const leftPos = center ? Math.floor((box.clientWidth - btn.offsetWidth) / 2) : Math.floor(padX + Math.random() * Math.max(1, maxX - padX));
+            const topPos = center ? Math.floor(minTop + (maxY - minTop) / 2) : Math.floor(minTop + Math.random() * Math.max(1, maxY - minTop));
+            btn.style.left = Math.max(padX, leftPos) + 'px';
+            btn.style.top = Math.max(minTop, topPos) + 'px';
+        }
+
+        let refuseMsgIdx = 0;
+        function dodgeRefuseButton(e) {
+            if (e) e.preventDefault();
+            SFX.slideWhistle();
+            placeRefuseButton(false);
+            const lines = [
+                '😂 Senior-er order refuse korar sahosh?! Button-tai paliye gelo!',
+                '🚫 Lal Bari-te Refuse option kaaj kore na — hashi mukhe tick kor ar treat ready rakh!',
+                '🏃‍♂️ Senior-der bhoy-e Refuse button nijei dour lagalo!'
+            ];
+            const msg = lines[refuseMsgIdx % lines.length];
+            refuseMsgIdx++;
+
+            const msgEl = document.getElementById('refuseMsgDisplay');
+            if (msgEl) {
+                msgEl.textContent = msg;
+                msgEl.classList.remove('hidden');
+            }
+            showToast(msg, 4400);
+        }
+
+        const btnRefuse = document.getElementById('btnRefuseOrder');
+        btnRefuse.addEventListener('mouseenter', dodgeRefuseButton);
+        btnRefuse.addEventListener('touchstart', dodgeRefuseButton, { passive: false });
+        btnRefuse.addEventListener('click', dodgeRefuseButton);
+
+        const RING_CIRCUMFERENCE = 125.66;
+        function resetSealProgressUI() {
+            document.getElementById('sealLinearFill').style.width = '0%';
+            document.getElementById('sealRingCircle').style.strokeDashoffset = String(RING_CIRCUMFERENCE);
+            document.getElementById('sealBtnText').textContent = 'HOLD TO STAMP OFFICIAL SEAL (1.2s)';
+        }
+
+        function startWaxHold(e) {
+            if (e) e.preventDefault();
+            if (state.oathSealed) return;
+
+            if (!allClausesChecked()) {
+                SFX.cartoonSlip();
+                showToast('⚠️ Agey uporer 3-te clause tick kor!', 3800);
+                return;
+            }
+
+            const now = Date.now();
+            if (now - state.oathLastTapTime < 380) {
+                completeWaxSeal();
+                return;
+            }
+            state.oathLastTapTime = now;
+
+            state.oathHolding = true;
+            state.oathHoldStart = performance.now();
+            document.getElementById('sealBtnText').textContent = 'STAMPING OFFICIAL SEAL...';
+            SFX.playTone(190, 'sine', 1.2, 0.13, 540);
+
+            clearInterval(state.oathVibId);
+            state.oathVibId = setInterval(() => vibrate(18), 180);
+
+            function step(ts) {
+                if (!state.oathHolding || state.oathSealed) return;
+                const progress = Math.min(1, (ts - state.oathHoldStart) / 1200);
+                document.getElementById('sealLinearFill').style.width = (progress * 100) + '%';
+                document.getElementById('sealRingCircle').style.strokeDashoffset = String(RING_CIRCUMFERENCE * (1 - progress));
+                if (progress >= 1) completeWaxSeal();
+                else state.oathRaf = requestAnimationFrame(step);
+            }
+            state.oathRaf = requestAnimationFrame(step);
+        }
+
+        function cancelWaxHold() {
+            if (!state.oathHolding || state.oathSealed) return;
+            state.oathHolding = false;
+            cancelAnimationFrame(state.oathRaf);
+            clearInterval(state.oathVibId);
+            resetSealProgressUI();
+        }
+
+        function completeWaxSeal() {
+            if (state.oathSealed) return;
+            state.oathSealed = true;
+            state.oathHolding = false;
+            cancelAnimationFrame(state.oathRaf);
+            clearInterval(state.oathVibId);
+
+            document.getElementById('sealLinearFill').style.width = '100%';
+            document.getElementById('sealRingCircle').style.strokeDashoffset = '0';
+            document.getElementById('sealBtnText').textContent = 'OFFICIAL SEAL STAMPED ✓';
+
+            SFX.gavel();
+            setTimeout(() => SFX.fanfare(), 360);
+            triggerFlash('rgba(0, 255, 148, 0.78)');
+            fireConfetti();
+
+            showSeniorDock({
+                mood: 'sigma',
+                text: 'WELCOME HOME, JUNIOR! Tui ekhon official CTS Lal Bari × DCST 2026–2027 member! 🏛️⚡'
+            });
+
+            setTimeout(() => {
+                hideSeniorDock();
+                initStage5();
+            }, 1300);
+        }
+
+        const btnSeal = document.getElementById('btnStampWaxSeal');
+        btnSeal.addEventListener('pointerdown', startWaxHold);
+        btnSeal.addEventListener('pointerup', cancelWaxHold);
+        btnSeal.addEventListener('pointerleave', cancelWaxHold);
+        btnSeal.addEventListener('pointercancel', cancelWaxHold);
+
+        /* =====================================================================
+           9. STAGE 5 — COLLECTOR PASS CUSTOMIZER & LIVE PREVIEW
+        ===================================================================== */
+        function initStage5() {
+            showStage(5);
+            renderPickerControls();
+            renderViralCaptions();
+            syncPassPreview();
+            setTimeout(() => fireConfetti(), 260);
+        }
+
+        function renderPickerControls() {
+            const avatarGrid = document.getElementById('avatarPickerGrid');
+            avatarGrid.innerHTML = '';
+            PASS_AVATARS.forEach(av => {
+                const active = !state.passSelfieImg && state.passAvatar === av.id;
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = `p-2 rounded-xl border-2 text-center cursor-pointer transition flex flex-col items-center gap-1 ${
+                    active ? 'border-hackerGreen bg-hackerGreen/15 text-hackerGreen' : 'border-white/15 bg-cyberBg/80 text-offWhite/75 hover:border-cyberBlue/60'
+                }`;
+                btn.innerHTML = `
+                    <div class="w-11 h-11 rounded-full overflow-hidden border border-cyberBlue/55">${getPassAvatarSVG(av.id)}</div>
+                    <span class="font-mono text-[10px] font-bold leading-tight">${av.label}</span>
+                `;
+                btn.addEventListener('click', () => {
+                    SFX.click();
+                    state.passSelfieImg = null;
+                    state.passAvatar = av.id;
+                    renderPickerControls();
+                    syncPassPreview();
+                });
+                avatarGrid.appendChild(btn);
+            });
+
+            const titleGrid = document.getElementById('titlePickerGrid');
+            titleGrid.innerHTML = '';
+            PASS_TITLES.forEach(title => {
+                const active = state.passTitle === title;
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = `px-3 py-2.5 rounded-xl border-2 text-left font-sans text-xs sm:text-[13px] font-bold cursor-pointer transition ${
+                    active ? 'border-holud bg-lalRed/30 text-holud' : 'border-white/15 bg-cyberBg/80 text-offWhite/85 hover:border-cyberBlue/55'
+                }`;
+                btn.textContent = title;
+                btn.addEventListener('click', () => {
+                    SFX.click();
+                    state.passTitle = title;
+                    renderPickerControls();
+                    syncPassPreview();
+                });
+                titleGrid.appendChild(btn);
+            });
+
+            const stampGrid = document.getElementById('stampPickerGrid');
+            stampGrid.innerHTML = '';
+            PASS_STAMPS.forEach(st => {
+                const active = state.passStamp === st.id;
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = `px-3 py-2.5 rounded-xl border-2 font-mono text-[11px] font-extrabold uppercase cursor-pointer transition ${
+                    active ? 'border-hackerGreen bg-hackerGreen/15 text-hackerGreen' : 'border-white/15 bg-cyberBg/80 text-offWhite/80 hover:border-cyberBlue/55'
+                }`;
+                btn.textContent = st.label;
+                btn.addEventListener('click', () => {
+                    SFX.click();
+                    state.passStamp = st.id;
+                    renderPickerControls();
+                    syncPassPreview();
+                });
+                stampGrid.appendChild(btn);
+            });
+        }
+
+        function renderBarcode(seedStr) {
+            const svg = document.getElementById('passBarcodeSvg');
+            if (!svg) return;
+            let bars = '';
+            let x = 6;
+            const s = (seedStr || 'LALBARIDCST') + '2627';
+            for (let i = 0; i < 42 && x < 252; i++) {
+                const code = s.charCodeAt(i % s.length) + i * 7;
+                const w = (code % 3) + 1.6;
+                if (i % 2 === 0 || code % 3 !== 0) {
+                    const col = i % 5 === 0 ? '#FACC15' : i % 3 === 0 ? '#00FF94' : '#00D2FF';
+                    bars += `<rect x="${x.toFixed(1)}" y="1" width="${w.toFixed(1)}" height="20" fill="${col}" fill-opacity="0.88"/>`;
+                }
+                x += w + 2.4;
+            }
+            svg.innerHTML = bars;
+        }
+
+        function syncPassPreview() {
+            const nameVal = (state.passName.trim() || 'DCST JUNIOR').toUpperCase();
+            document.getElementById('passNamePreview').textContent = nameVal;
+            document.getElementById('passTitlePreview').textContent = state.passTitle;
+            document.getElementById('passSerialTxt').textContent = state.passSerial;
+
+            const imgEl = document.getElementById('passSelfiePreview');
+            const avEl = document.getElementById('passAvatarPreview');
+            const btnRemove = document.getElementById('btnRemovePhoto');
+
+            if (state.passSelfieImg) {
+                imgEl.src = state.passSelfieImg.src;
+                imgEl.classList.remove('hidden');
+                avEl.classList.add('hidden');
+                btnRemove.classList.remove('hidden');
+            } else {
+                imgEl.classList.add('hidden');
+                avEl.classList.remove('hidden');
+                avEl.innerHTML = getPassAvatarSVG(state.passAvatar);
+                btnRemove.classList.add('hidden');
+            }
+
+            const stObj = PASS_STAMPS.find(s => s.id === state.passStamp) || PASS_STAMPS[0];
+            document.getElementById('passStampPreview').innerHTML = `
+                <span class="sticker-pill" style="background:${stObj.bg};color:${stObj.fg};--rot:${stObj.rot};font-size:10px;padding:4px 10px;animation:none;transform:rotate(${stObj.rot});">
+                    ${stObj.label}
+                </span>
+            `;
+
+            renderBarcode(nameVal + state.passSerial);
+        }
+
+        document.getElementById('passNameInput').addEventListener('input', (e) => {
+            state.passName = e.target.value;
+            syncPassPreview();
+        });
+
+        document.getElementById('btnRemovePhoto').addEventListener('click', () => {
+            SFX.click();
+            state.passSelfieImg = null;
+            document.getElementById('galleryFileInput').value = '';
+            renderPickerControls();
+            syncPassPreview();
+        });
+
+        document.getElementById('galleryFileInput').addEventListener('change', (e) => {
+            const file = e.target.files && e.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = (ev) => {
+                const img = new Image();
+                img.onload = () => {
+                    state.passSelfieImg = img;
+                    SFX.success();
+                    renderPickerControls();
+                    syncPassPreview();
+                    showToast('🖼️ Photo added to your Collector Pass!', 2000);
+                };
+                img.src = ev.target.result;
+            };
+            reader.readAsDataURL(file);
+        });
+
+        (function setupPass3DTilt() {
+            const wrap = document.getElementById('passTiltWrap');
+            const card = document.getElementById('pass3dCard');
+            const sheen = document.getElementById('passHoloSheen');
+            if (!wrap || !card) return;
+
+            wrap.addEventListener('pointermove', (e) => {
+                const rect = wrap.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width;
+                const y = (e.clientY - rect.top) / rect.height;
+                card.style.transform = `rotateX(${((0.5 - y) * 16).toFixed(1)}deg) rotateY(${((x - 0.5) * 18).toFixed(1)}deg)`;
+                if (sheen) sheen.style.backgroundPosition = `${Math.round(x * 100)}% ${Math.round(y * 100)}%`;
+            });
+            wrap.addEventListener('pointerleave', () => {
+                card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+            });
+        })();
+
+        /* =====================================================================
+           10. LIVE CAMERA SELFIE MODAL (FRONT/REAR FLIP + CLEAN TEARDOWN)
+        ===================================================================== */
+        async function startLiveCamera() {
+            stopCameraStream();
+            const video = document.getElementById('liveCamVideo');
+            if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+                showToast('📷 Camera unavailable — use Gallery Photo!', 2400);
+                return;
+            }
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({
+                    video: { facingMode: state.camFacing, width: { ideal: 720 }, height: { ideal: 720 } },
+                    audio: false
+                });
+                state.camStream = stream;
+                video.srcObject = stream;
+                video.style.transform = state.camFacing === 'user' ? 'scaleX(-1)' : 'none';
+                await video.play();
+            } catch (err) {
+                closeCameraModal();
+                showToast('📷 Camera permission denied — Gallery Photo diye upload kor!', 2600);
+            }
+        }
+
+        function stopCameraStream() {
+            if (state.camStream) {
+                state.camStream.getTracks().forEach(track => track.stop());
+                state.camStream = null;
+            }
+            const video = document.getElementById('liveCamVideo');
+            if (video) video.srcObject = null;
+        }
+
+        function closeCameraModal() {
+            stopCameraStream();
+            const modal = document.getElementById('cameraModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        document.getElementById('btnOpenLiveCam').addEventListener('click', () => {
+            SFX.click();
+            const modal = document.getElementById('cameraModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            startLiveCamera();
+        });
+        document.getElementById('btnCloseCamera').addEventListener('click', () => {
+            SFX.click();
+            closeCameraModal();
+        });
+        document.getElementById('btnFlipCamera').addEventListener('click', () => {
+            SFX.click();
+            state.camFacing = state.camFacing === 'user' ? 'environment' : 'user';
+            startLiveCamera();
+        });
+        document.getElementById('btnCaptureSelfie').addEventListener('click', () => {
+            const video = document.getElementById('liveCamVideo');
+            if (!video || !video.videoWidth) {
+                showToast('Camera warming up — tap again!', 1600);
+                return;
+            }
+            SFX.shutter();
+            const flash = document.getElementById('camShutterFlash');
+            flash.classList.remove('hidden');
+            setTimeout(() => flash.classList.add('hidden'), 140);
+
+            const size = Math.min(video.videoWidth, video.videoHeight);
+            const sx = (video.videoWidth - size) / 2;
+            const sy = (video.videoHeight - size) / 2;
+            const c = document.createElement('canvas');
+            c.width = 600;
+            c.height = 600;
+            const ctx = c.getContext('2d');
+            if (state.camFacing === 'user') {
+                ctx.translate(600, 0);
+                ctx.scale(-1, 1);
+            }
+            ctx.drawImage(video, sx, sy, size, size, 0, 0, 600, 600);
+
+            const img = new Image();
+            img.onload = () => {
+                state.passSelfieImg = img;
+                closeCameraModal();
+                renderPickerControls();
+                syncPassPreview();
+                showToast('📸 Killer selfie added! Story PNG ready!', 2200);
+            };
+            img.src = c.toDataURL('image/jpeg', 0.92);
+        });
+
+        /* =====================================================================
+           11. HIGH-DPI 9:16 (1080×1920) INSTA STORY PNG EXPORTER
+        ===================================================================== */
+        function roundRectPath(ctx, x, y, w, h, r) {
+            ctx.beginPath();
+            ctx.moveTo(x + r, y);
+            ctx.arcTo(x + w, y, x + w, y + h, r);
+            ctx.arcTo(x + w, y + h, x, y + h, r);
+            ctx.arcTo(x, y + h, x, y, r);
+            ctx.arcTo(x, y, x + w, y, r);
+            ctx.closePath();
+        }
+
+        async function exportStoryPassPNG() {
+            SFX.success();
+            showToast('✨ Rendering 1080×1920 Story PNG...', 1800);
+
+            const W = 1080, H = 1920;
+            const canvas = document.createElement('canvas');
+            canvas.width = W;
+            canvas.height = H;
+            const ctx = canvas.getContext('2d');
+
+            const bg = ctx.createLinearGradient(0, 0, 0, H);
+            bg.addColorStop(0, '#0C1424');
+            bg.addColorStop(0.5, '#070B13');
+            bg.addColorStop(1, '#05070C');
+            ctx.fillStyle = bg;
+            ctx.fillRect(0, 0, W, H);
+
+            ctx.strokeStyle = 'rgba(0, 210, 255, 0.06)';
+            ctx.lineWidth = 2;
+            for (let y = 0; y < H; y += 54) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke(); }
+            for (let x = 0; x < W; x += 54) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke(); }
+
+            const glow1 = ctx.createRadialGradient(220, 240, 20, 220, 240, 520);
+            glow1.addColorStop(0, 'rgba(225, 29, 46, 0.34)');
+            glow1.addColorStop(1, 'rgba(225, 29, 46, 0)');
+            ctx.fillStyle = glow1;
+            ctx.fillRect(0, 0, W, H);
+
+            const glow2 = ctx.createRadialGradient(860, 1620, 20, 860, 1620, 520);
+            glow2.addColorStop(0, 'rgba(0, 255, 148, 0.22)');
+            glow2.addColorStop(1, 'rgba(0, 255, 148, 0)');
+            ctx.fillStyle = glow2;
+            ctx.fillRect(0, 0, W, H);
+
+            const cardX = 76, cardY = 120, cardW = W - 152, cardH = H - 240;
+            roundRectPath(ctx, cardX, cardY, cardW, cardH, 54);
+            const cardBg = ctx.createLinearGradient(cardX, cardY, cardX, cardY + cardH);
+            cardBg.addColorStop(0, '#0E1729');
+            cardBg.addColorStop(0.55, '#09101D');
+            cardBg.addColorStop(1, '#06090F');
+            ctx.fillStyle = cardBg;
+            ctx.fill();
+            ctx.lineWidth = 5;
+            ctx.strokeStyle = '#00D2FF';
+            ctx.stroke();
+
+            ctx.save();
+            roundRectPath(ctx, cardX, cardY, cardW, cardH, 54);
+            ctx.clip();
+            const topBar = ctx.createLinearGradient(cardX, cardY, cardX + cardW, cardY);
+            topBar.addColorStop(0, '#E11D2E');
+            topBar.addColorStop(0.5, '#FACC15');
+            topBar.addColorStop(1, '#00FF94');
+            ctx.fillStyle = topBar;
+            ctx.fillRect(cardX, cardY, cardW, 18);
+            ctx.restore();
+
+            ctx.font = '800 26px "JetBrains Mono", monospace';
+            ctx.fillStyle = '#00FF94';
+            ctx.textAlign = 'left';
+            ctx.fillText('● DCST VERIFIED ✓', cardX + 64, cardY + 104);
+
+            ctx.fillStyle = '#FACC15';
+            ctx.textAlign = 'right';
+            ctx.fillText(state.passSerial, cardX + cardW - 64, cardY + 104);
+
+            ctx.strokeStyle = 'rgba(0, 210, 255, 0.32)';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(cardX + 60, cardY + 140);
+            ctx.lineTo(cardX + cardW - 60, cardY + 140);
+            ctx.stroke();
+
+            ctx.textAlign = 'center';
+            ctx.fillStyle = '#FACC15';
+            ctx.font = '700 24px "JetBrains Mono", monospace';
+            ctx.fillText('CTS GOVERNMENT POLYTECHNIC • KOLKATA', W / 2, cardY + 196);
+
+            ctx.fillStyle = '#F4F6FA';
+            ctx.font = '800 46px "Syne", sans-serif';
+            ctx.fillText('LAL BARI × DCST PASS', W / 2, cardY + 258);
+
+            ctx.beginPath();
+            ctx.moveTo(cardX + 60, cardY + 292);
+            ctx.lineTo(cardX + cardW - 60, cardY + 292);
+            ctx.stroke();
+
+            const cx = W / 2, cy = cardY + 515, rad = 180;
+            ctx.save();
+            ctx.setLineDash([16, 14]);
+            ctx.strokeStyle = '#00D2FF';
+            ctx.lineWidth = 5;
+            ctx.beginPath();
+            ctx.arc(cx, cy, rad + 24, 0, Math.PI * 2);
+            ctx.stroke();
+            ctx.restore();
+
+            ctx.save();
+            ctx.beginPath();
+            ctx.arc(cx, cy, rad, 0, Math.PI * 2);
+            ctx.clip();
+            ctx.fillStyle = '#06090F';
+            ctx.fillRect(cx - rad, cy - rad, rad * 2, rad * 2);
+
+            if (state.passSelfieImg) {
+                const img = state.passSelfieImg;
+                const scale = Math.max((rad * 2) / img.width, (rad * 2) / img.height);
+                const dw = img.width * scale, dh = img.height * scale;
+                ctx.drawImage(img, cx - dw / 2, cy - dh / 2, dw, dh);
+            } else {
+                try {
+                    const blob = new Blob([getPassAvatarSVG(state.passAvatar)], { type: 'image/svg+xml;charset=utf-8' });
+                    const url = URL.createObjectURL(blob);
+                    await new Promise((resolve) => {
+                        const avImg = new Image();
+                        avImg.onload = () => { ctx.drawImage(avImg, cx - rad, cy - rad, rad * 2, rad * 2); URL.revokeObjectURL(url); resolve(); };
+                        avImg.onerror = () => { URL.revokeObjectURL(url); resolve(); };
+                        avImg.src = url;
+                    });
+                } catch (e) {}
+            }
+            ctx.restore();
+
+            ctx.strokeStyle = '#E11D2E';
+            ctx.lineWidth = 10;
+            ctx.beginPath();
+            ctx.arc(cx, cy, rad, 0, Math.PI * 2);
+            ctx.stroke();
+
+            const stObj = PASS_STAMPS.find(s => s.id === state.passStamp) || PASS_STAMPS[0];
+            ctx.save();
+            ctx.translate(cx, cy + rad + 56);
+            ctx.rotate((parseFloat(stObj.rot) || -4) * (Math.PI / 180));
+            ctx.font = '800 24px "Space Grotesk", sans-serif';
+            const stW = Math.max(270, ctx.measureText(stObj.label).width + 52);
+            roundRectPath(ctx, -stW / 2, -28, stW, 56, 16);
+            ctx.fillStyle = stObj.bg;
+            ctx.fill();
+            ctx.lineWidth = 4;
+            ctx.strokeStyle = '#F4F6FA';
+            ctx.stroke();
+            ctx.fillStyle = stObj.fg;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(stObj.label, 0, 2);
+            ctx.restore();
+
+            const nameVal = (state.passName.trim() || 'DCST JUNIOR').toUpperCase();
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'alphabetic';
+            ctx.fillStyle = '#F4F6FA';
+            ctx.font = '800 64px "Syne", sans-serif';
+            ctx.fillText(nameVal, W / 2, cardY + 885, cardW - 110);
+
+            ctx.font = '800 28px "JetBrains Mono", monospace';
+            const titleText = state.passTitle.toUpperCase();
+            const pillW = Math.min(cardW - 100, Math.max(460, ctx.measureText(titleText).width + 72));
+            roundRectPath(ctx, W / 2 - pillW / 2, cardY + 920, pillW, 74, 20);
+            ctx.fillStyle = 'rgba(225, 29, 46, 0.3)';
+            ctx.fill();
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = '#FACC15';
+            ctx.stroke();
+            ctx.fillStyle = '#FACC15';
+            ctx.fillText(titleText, W / 2, cardY + 968, pillW - 40);
+
+            const boxData = [
+                { k: 'CAMPUS', v: 'LAL BARI', c: '#FACC15', b: 'rgba(225,29,46,0.55)' },
+                { k: 'DEPARTMENT', v: 'DCST 26–27', c: '#00D2FF', b: 'rgba(0,210,255,0.5)' },
+                { k: 'ADDA HQ', v: 'KALO PATHOR', c: '#F4F6FA', b: 'rgba(0,210,255,0.5)' },
+                { k: 'CLEARANCE', v: 'SENIOR OK ✓', c: '#00FF94', b: 'rgba(0,255,148,0.5)' }
+            ];
+            const gap = 28, cellW = (cardW - 120 - gap) / 2, cellH = 132, gridY = cardY + 1045;
+            boxData.forEach((item, idx) => {
+                const bx = cardX + 60 + (idx % 2) * (cellW + gap);
+                const by = gridY + Math.floor(idx / 2) * (cellH + gap);
+                roundRectPath(ctx, bx, by, cellW, cellH, 24);
+                ctx.fillStyle = 'rgba(6, 9, 15, 0.92)';
+                ctx.fill();
+                ctx.lineWidth = 2.5;
+                ctx.strokeStyle = item.b;
+                ctx.stroke();
+
+                ctx.textAlign = 'center';
+                ctx.fillStyle = 'rgba(244, 246, 250, 0.58)';
+                ctx.font = '700 22px "JetBrains Mono", monospace';
+                ctx.fillText(item.k, bx + cellW / 2, by + 48);
+
+                ctx.fillStyle = item.c;
+                ctx.font = '800 32px "JetBrains Mono", monospace';
+                ctx.fillText(item.v, bx + cellW / 2, by + 100);
+            });
+
+            let bx = cardX + 90;
+            const barMax = cardX + cardW - 90;
+            const seed = nameVal + state.passSerial + 'CTS';
+            for (let i = 0; i < 65 && bx < barMax; i++) {
+                const c = seed.charCodeAt(i % seed.length) + i * 11;
+                const bw = (c % 5) + 4;
+                if (i % 2 === 0 || c % 3 !== 0) {
+                    ctx.fillStyle = i % 5 === 0 ? '#FACC15' : i % 3 === 0 ? '#00FF94' : '#00D2FF';
+                    ctx.fillRect(bx, cardY + 1405, bw, 84);
+                }
+                bx += bw + 7;
+            }
+
+            ctx.fillStyle = '#00D2FF';
+            ctx.font = '800 24px "JetBrains Mono", monospace';
+            ctx.textAlign = 'center';
+            ctx.fillText('AMADER BHALOBASHAR LAL BARI • DCST 2026–2027', W / 2, cardY + 1555);
+
+            try {
+                const link = document.createElement('a');
+                link.download = 'CTS_Lal_Bari_DCST_26_27_Story.png';
+                link.href = canvas.toDataURL('image/png');
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                showToast('🎉 Story PNG downloaded! Insta Story-te post kore DCST tag kor!', 2800);
+            } catch (e) {
+                showToast('Take a screenshot of your pass to share on Insta!', 2400);
+            }
+        }
+
+        document.getElementById('btnDownloadStoryPNG').addEventListener('click', exportStoryPassPNG);
+
+        /* =====================================================================
+           12. COPYABLE UNIQUE CAPTIONS (IFRAME-SAFE document.execCommand)
+        ===================================================================== */
+        function copyTextFallback(text) {
+            try {
+                const ta = document.createElement('textarea');
+                ta.value = text;
+                ta.style.position = 'fixed';
+                ta.style.left = '-9999px';
+                ta.style.top = '0';
+                document.body.appendChild(ta);
+                ta.focus();
+                ta.select();
+                const ok = document.execCommand('copy');
+                document.body.removeChild(ta);
+                return ok;
+            } catch (e) {
+                return false;
+            }
+        }
+
+        function renderViralCaptions() {
+            const grid = document.getElementById('captionsListGrid');
+            if (!grid) return;
+            grid.innerHTML = '';
+
+            VIRAL_CAPTIONS.forEach((cap) => {
+                const card = document.createElement('div');
+                card.className = 'dcst-panel rounded-2xl p-5 flex flex-col justify-between gap-4';
+                card.innerHTML = `
+                    <div class="space-y-2">
+                        <div class="font-mono text-[11px] font-extrabold uppercase tracking-widest text-holud">${cap.tag}</div>
+                        <p class="text-[16px] font-medium text-offWhite/90 leading-[1.6]">${cap.text}</p>
+                    </div>
+                `;
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'w-full min-h-[46px] py-2.5 px-4 rounded-xl bg-cyberBlue/15 hover:bg-cyberBlue/25 border border-cyberBlue/55 font-mono text-xs font-extrabold uppercase tracking-wider text-cyberBlue cursor-pointer active:scale-95 transition';
+                btn.textContent = '📋 COPY CAPTION';
+                btn.addEventListener('click', () => {
+                    SFX.click();
+                    copyTextFallback(cap.text);
+                    btn.textContent = '✓ COPIED TO CLIPBOARD!';
+                    showToast('📋 Caption copied! Direct Insta Story / Post-e paste kor!', 1900);
+                    setTimeout(() => { btn.textContent = '📋 COPY CAPTION'; }, 1800);
+                });
+                card.appendChild(btn);
+                grid.appendChild(card);
+            });
+        }
+
+        /* =====================================================================
+           13. REPLAY & BOOT
+        ===================================================================== */
+        document.getElementById('btnReplayExperience').addEventListener('click', () => {
+            SFX.click();
+            closeCameraModal();
+            hideSeniorDock();
+            showTransition('RESETTING MYSTERY FILE...', () => showStage(0));
+        });
+
+        window.addEventListener('load', () => {
+            showStage(0);
+            renderPickerControls();
+            renderViralCaptions();
+            syncPassPreview();
+        });
+    </script>
+</body>
+</html>
